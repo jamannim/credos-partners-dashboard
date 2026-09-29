@@ -496,7 +496,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
           </div>
         </div>
 
-        {/* 4. 연간 버닝레이트 (25년 결산) + (i) 마우스오버 산출 산식 툴팁 */}
+        {/* 4. 연간 버닝레이트 (4대보험 7인 기준) + (i) 마우스오버 산출 산식 툴팁 */}
         <div className="p-4 sm:p-5 rounded-xl bg-dark-900 border border-brand-rose/40 bg-gradient-to-br from-dark-900 via-dark-900 to-brand-rose/10 flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold text-slate-200 flex items-center gap-1.5">
@@ -505,21 +505,21 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
               <span className="relative group inline-flex items-center cursor-help">
                 <Info className="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-cyan transition-colors" />
                 <span className="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 rounded-xl bg-dark-950 border border-dark-700 text-xs text-slate-200 font-normal shadow-2xl z-50 leading-relaxed">
-                  <strong className="text-brand-cyan font-bold block mb-1">버닝레이트 산출 산식</strong>
-                  • 총 소진액 = 임직원 수 × 평균 연봉 × 1.5배수<br />
-                  • 25년(20.2억) = 인건비 15.8억 + 운영비 4.4억
+                  <strong className="text-brand-cyan font-bold block mb-1">버닝레이트 산출 산식 (NICE 공시)</strong>
+                  • 총 소진액 = 4대보험 가입(7인) × 평균 연봉(4,500만) × 1.5배수<br />
+                  • 연간(4.73억) = 인건비 3.15억 + 운영비 1.58억
                 </span>
               </span>
             </span>
             <span className="text-xs px-2.5 py-0.5 rounded-md font-bold bg-brand-rose/20 text-brand-rose">
-              25년 결산
+              4대보험 7인
             </span>
           </div>
           <div className="text-2xl sm:text-3xl font-black text-brand-rose my-3 tracking-tight tabular-nums">
-            20.2억 원
+            4.73억 원
           </div>
           <div className="text-xs text-slate-400 font-medium pt-2.5 border-t border-dark-750/70 truncate tabular-nums">
-            인건비 15.8억 + 운영비 4.4억
+            4대보험 7인 (인건비 3.15억 + 운영비 1.58억)
           </div>
         </div>
 
@@ -538,7 +538,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
             34.2억 원+
           </div>
           <div className="text-xs text-cyan-200/90 font-medium pt-2.5 border-t border-dark-750/70 truncate tabular-nums">
-            런웨이 <strong className="font-bold text-white">4.5년 이상</strong> 안정권 확보
+            런웨이 <strong className="font-bold text-white">7.2년 이상</strong> 초안정권 확보
           </div>
         </div>
 
@@ -681,7 +681,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
         </div>
       </div>
 
-      {/* 4. 연간 버닝레이트 분석 (산출 산식 (i) 마우스오버 적용) */}
+      {/* 4. 연간 버닝레이트 분석 (4대보험 가입자 7인 기준) */}
       <div className="p-6 rounded-2xl bg-dark-900 border border-dark-700 space-y-5">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-3.5 border-b border-dark-700 gap-3">
           <div>
@@ -693,23 +693,23 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                   <Info className="w-4 h-4 text-slate-400 group-hover:text-brand-cyan transition-colors" />
                   <span className="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute bottom-full left-0 sm:left-1/2 sm:-translate-x-1/2 mb-2 w-80 p-3.5 rounded-xl bg-dark-950 border border-dark-700 text-xs text-slate-200 font-normal shadow-2xl z-50 leading-relaxed">
                     <strong className="text-brand-cyan font-bold block mb-1">버닝레이트(소진액) 산출 산식</strong>
-                    • 버닝레이트 = 임직원 수 × 평균 연봉 × 1.5배수<br />
-                    • 25년 총 소진액(20.2억) = 인건비 15.8억 + 간접운영비 4.4억<br />
-                    • 25년 말 가용현금(29.8억) = 케이넷 20억 유입 + 영업익 +6.8억 반영
+                    • 버닝레이트 = 4대보험 가입자(7인) × 평균 연봉(4,500만) × 1.5배수<br />
+                    • 연간 총 소진액(4.73억) = 직접 인건비 3.15억 + 간접운영비 1.58억<br />
+                    • NICE 기업공시(PG7387) 현재 4대보험 가입 7인 기준 반영
                   </span>
                 </span>
               </h3>
               <span className="text-xs px-2.5 py-0.5 rounded-md font-bold bg-brand-rose/15 text-brand-rose">
-                25년 결산 기준
+                4대보험 가입자 7인 기준
               </span>
             </div>
             <p className="text-sm text-slate-400 mt-1 font-normal">
-              핵심 5대 지출 분해 및 운영 비용 구성 (산출 산식은 <strong className="text-slate-300 font-semibold">(i) 아이콘</strong> 마우스오버 확인)
+              4대보험 가입 7인 기준 핵심 5대 지출 분해 및 운영 비용 구성 (산출 산식은 <strong className="text-slate-300 font-semibold">(i) 아이콘</strong> 마우스오버 확인)
             </p>
           </div>
         </div>
 
-        {/* 25년 결산 기준 5대 세부 지출 분해 카드 */}
+        {/* 4대보험 가입자 7인 기준 5대 세부 지출 분해 카드 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
           
           {/* 1. 총 인건비 */}
@@ -720,14 +720,14 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                 <span>총 인건비</span>
               </span>
               <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-purple/20 text-brand-purpleLight font-bold tabular-nums">
-                비중 78.2%
+                비중 66.6%
               </span>
             </div>
             <div className="text-2xl sm:text-3xl font-black text-white my-3 tracking-tight tabular-nums">
-              15.8억 원
+              3.15억 원
             </div>
             <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
-              임직원 21명 급여 · 4대보험
+              4대보험 가입 7인 급여 · 4대보험
             </div>
           </div>
 
@@ -739,11 +739,11 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                 <span>R&D · 금융보안비</span>
               </span>
               <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-rose/20 text-brand-rose font-bold tabular-nums">
-                비중 13.9%
+                비중 9.5%
               </span>
             </div>
             <div className="text-2xl sm:text-3xl font-black text-brand-rose my-3 tracking-tight tabular-nums">
-              2.8억 원
+              4,500만 원
             </div>
             <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
               금융망 연동 · 보안심사 · 특허
@@ -758,11 +758,11 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                 <span>임대 및 관리비</span>
               </span>
               <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-amber/20 text-brand-amber font-bold tabular-nums">
-                비중 4.2%
+                비중 10.1%
               </span>
             </div>
             <div className="text-2xl sm:text-3xl font-black text-brand-amber my-3 tracking-tight tabular-nums">
-              8,400만 원
+              4,800만 원
             </div>
             <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
               논현동 본사 · 여의도 핀테크랩
@@ -777,11 +777,11 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                 <span>부가세 및 세금</span>
               </span>
               <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-teal/20 text-brand-teal font-bold tabular-nums">
-                비중 2.2%
+                비중 6.5%
               </span>
             </div>
             <div className="text-2xl sm:text-3xl font-black text-brand-teal my-3 tracking-tight tabular-nums">
-              4,500만 원
+              3,080만 원
             </div>
             <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
               SaaS 이용료 부가세 · 공과금
@@ -796,7 +796,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                 <span>클라우드 서버비</span>
               </span>
               <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-cyan/20 text-brand-cyan font-bold tabular-nums">
-                비중 1.7%
+                비중 7.2%
               </span>
             </div>
             <div className="text-2xl sm:text-3xl font-black text-brand-cyan my-3 tracking-tight tabular-nums">
