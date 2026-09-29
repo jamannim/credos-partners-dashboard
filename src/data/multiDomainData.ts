@@ -641,7 +641,7 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         description: '금융위원회 혁신금융서비스 1호 지정: 신탁업무 온라인 관리 시스템(TOMS) 규제특례 획득',
         employeeCountAtTime: 12,
         burnRateAtTime: '10.7억',
-        sourceUrl: 'https://www.fsc.go.kr/no010101/81880',
+        sourceUrl: 'https://www.fsc.go.kr/no010101/83509',
         sourceName: '금융규제 샌드박스 공식 포털'
       },
       {
@@ -669,7 +669,7 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         description: '금융위원회 혁신금융서비스 2호 지정(사모투자 WM 관리 플랫폼 AIP) 및 동적 자산유동화(PDAS) 특허 등록',
         employeeCountAtTime: 16,
         burnRateAtTime: '15.3억',
-        sourceUrl: 'https://www.fsc.go.kr/no010101/81327',
+        sourceUrl: 'https://www.seoulfintechlab.kr/sub/company01.html?type=view&bsNo=648&page=1',
         sourceName: '금융위원회 특례 선정 공고'
       },
       {

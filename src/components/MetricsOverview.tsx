@@ -471,7 +471,7 @@ export const MetricsOverview: React.FC<Props> = ({
                       {androidDownloads}
                     </span>
                     <a 
-                      href="https://www.fsc.go.kr/no010101/81880" 
+                      href="https://www.fsc.go.kr/no010101/83509" 
                       target="_blank" 
                       rel="noreferrer" 
                       title="금융위원회 크레도스파트너스 혁신금융 지정공고 원문으로 이동"
@@ -503,7 +503,7 @@ export const MetricsOverview: React.FC<Props> = ({
                       {iosDownloads}
                     </span>
                     <a 
-                      href="https://www.fsc.go.kr/no010101/81327" 
+                      href="https://www.seoulfintechlab.kr/sub/company01.html?type=view&bsNo=648&page=1" 
                       target="_blank" 
                       rel="noreferrer" 
                       title="금융위원회 크레도스파트너스 특례정보 선정 공고로 이동"

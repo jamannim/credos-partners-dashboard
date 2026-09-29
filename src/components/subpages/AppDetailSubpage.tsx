@@ -127,7 +127,7 @@ export const AppDetailSubpage: React.FC<Props> = ({ data }) => {
     ? 'https://apps.apple.com/kr/app/wowpass/id1626691440' 
     : isTravel 
     ? 'https://apps.apple.com/kr/app/travelwallet/id1527017208' 
-    : 'https://www.fsc.go.kr/no010101/81880';
+    : 'https://www.fsc.go.kr/no010101/83509';
 
   const takeawayData = useMemo(() => {
     if (isWowpass) {

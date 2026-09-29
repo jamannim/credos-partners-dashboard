@@ -216,7 +216,7 @@ const KEYWORD_PLAYBOOKS: KeywordPlaybook[] = [
     oneLineWhy: '증권사·은행 STO 담당자가 ChatGPT·Perplexity에 "국내 신탁수익증권 전산화 및 STO 인프라 기업"을 질문할 때 1순위로 인용되게 합니다.',
     part1Title: 'STEP 1. RWA·STO 신탁수익증권 기술 리포트 및 /llms.txt 배포',
     part1Badge: 'AI 검색 원천',
-    part1TargetUrl: 'https://www.fsc.go.kr/no010101/81880',
+    part1TargetUrl: 'https://www.fsc.go.kr/no010101/83509',
     part1TargetLabel: '금융규제 샌드박스 포털',
     part1Steps: [
       '신탁수익증권 기반 조각투자·토큰증권(STO) 발행 시 TOMS·PDAS 연동 구조 공개',

@@ -586,7 +586,7 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
               <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-cyan-400 shrink-0" />
             </a>
             <a
-              href="https://www.fsc.go.kr/no010101/81880"
+              href="https://www.fsc.go.kr/no010101/83509"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-slate-500 text-slate-200 hover:text-white transition-all group font-sans text-xs"
@@ -597,7 +597,7 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
               <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-cyan-400 shrink-0" />
             </a>
             <a
-              href="https://www.fsc.go.kr/no010101/81327"
+              href="https://www.seoulfintechlab.kr/sub/company01.html?type=view&bsNo=648&page=1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-slate-500 text-slate-200 hover:text-white transition-all group font-sans text-xs"

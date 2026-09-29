@@ -298,7 +298,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
 
             {/* 3. 금융위원회 혁신금융서비스 공식 공고 열람 링크 */}
             <a
-              href="https://www.fsc.go.kr/no010101/81880"
+              href="https://www.fsc.go.kr/no010101/83509"
               target="_blank"
               rel="noopener noreferrer"
               className="h-10 px-3.5 rounded-xl bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-blue-500/50 text-xs sm:text-sm text-slate-200 font-bold flex items-center justify-center gap-2 transition-all shadow-sm hover:text-white group whitespace-nowrap"
@@ -842,7 +842,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
           </div>
           <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
             <a
-              href="https://www.fsc.go.kr/no010101/81880"
+              href="https://www.fsc.go.kr/no010101/83509"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-blue-500/40 text-xs font-bold text-slate-200 hover:text-white transition-all shadow-sm group"
@@ -1200,7 +1200,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
             <div className="pt-2.5 text-xs text-slate-300 font-medium border-t border-dark-750/70 flex items-center justify-between tabular-nums">
               <span>SaaS 구독 전환으로 유지보수 OPEX 경량화</span>
               <a
-                href="https://www.fsc.go.kr/no010101/81327"
+                href="https://www.seoulfintechlab.kr/sub/company01.html?type=view&bsNo=648&page=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-brand-amber inline-flex items-center gap-0.5"
