@@ -438,22 +438,22 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
       {/* 2. Key Metrics Overview (5 Cards: 단일 연도 표기 및 폰트/숫자 가독성 통일) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
         
-        {/* 1. 누적 투자 유치 (26년 기준) */}
+        {/* 1. 누적 투자액 (22~26년 누적) */}
         <div className="p-4 sm:p-5 rounded-xl bg-dark-900 border border-dark-700 flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold text-slate-200 flex items-center gap-1.5">
               <Landmark className="w-4 h-4 text-brand-purpleLight shrink-0" />
-              <span>누적 투자·보증</span>
+              <span>누적 투자액</span>
             </span>
             <span className="text-xs px-2.5 py-0.5 rounded-md font-bold bg-brand-purple/20 text-brand-purpleLight">
-              26년 기준
+              22~26년 누적
             </span>
           </div>
           <div className="text-2xl sm:text-3xl font-black text-brand-purpleLight my-3 tracking-tight tabular-nums">
-            40억 원+
+            40.00억 원
           </div>
           <div className="text-xs text-slate-400 font-medium pt-2.5 border-t border-dark-750/70 truncate tabular-nums">
-            케이넷투자파트너스 <strong className="font-bold text-white">20억 원</strong> Pre-A 포함
+            설립 2억 + 시드 8억 + 보증 10억 + <strong className="font-bold text-white">Pre-A 20억</strong>
           </div>
         </div>
 
@@ -477,37 +477,37 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
           </div>
         </div>
 
-        {/* 3. 연간 영업이익 (25년 결산) */}
+        {/* 3. 누적 순수익 (22~26년 반기 합산) */}
         <div className="p-4 sm:p-5 rounded-xl bg-dark-900 border border-dark-700 flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold text-slate-200 flex items-center gap-1.5">
               <Award className="w-4 h-4 text-brand-emerald shrink-0" />
-              <span>연간 영업이익</span>
+              <span>누적 순수익</span>
             </span>
             <span className="text-xs px-2.5 py-0.5 rounded-md font-bold bg-brand-emerald/20 text-brand-emerald">
-              25년 결산
+              22~26년 합산
             </span>
           </div>
           <div className="text-2xl sm:text-3xl font-black text-brand-emerald my-3 tracking-tight tabular-nums">
-            +6.8억 원
+            +4.00억 원
           </div>
           <div className="text-xs text-slate-400 font-medium pt-2.5 border-t border-dark-750/70 truncate tabular-nums">
-            26년 반기 <strong className="font-bold text-brand-emerald">+5.2억 원</strong> 흑자
+            25년 순익 <strong className="font-bold text-brand-emerald">+6.1억</strong> · 26년 반기 <strong className="font-bold text-brand-emerald">+4.7억</strong>
           </div>
         </div>
 
-        {/* 4. 연간 버닝레이트 (4대보험 7인 기준) + (i) 마우스오버 산출 산식 툴팁 */}
+        {/* 4. 매년 버닝레이트 (4.5개년 누적 21.29억) */}
         <div className="p-4 sm:p-5 rounded-xl bg-dark-900 border border-brand-rose/40 bg-gradient-to-br from-dark-900 via-dark-900 to-brand-rose/10 flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold text-slate-200 flex items-center gap-1.5">
               <Flame className="w-4 h-4 text-brand-rose shrink-0" />
-              <span>연간 소진액</span>
+              <span>매년 버닝레이트</span>
               <span className="relative group inline-flex items-center cursor-help">
                 <Info className="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-cyan transition-colors" />
-                <span className="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 rounded-xl bg-dark-950 border border-dark-700 text-xs text-slate-200 font-normal shadow-2xl z-50 leading-relaxed">
-                  <strong className="text-brand-cyan font-bold block mb-1">버닝레이트 산출 산식 (NICE 공시)</strong>
-                  • 총 소진액 = 4대보험 가입(7인) × 평균 연봉(4,500만) × 1.5배수<br />
-                  • 연간(4.73억) = 인건비 3.15억 + 운영비 1.58억
+                <span className="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 p-3 rounded-xl bg-dark-950 border border-dark-700 text-xs text-slate-200 font-normal shadow-2xl z-50 leading-relaxed">
+                  <strong className="text-brand-cyan font-bold block mb-1">매년 버닝레이트 & 4.5년 누적 산출식</strong>
+                  • 1년 버닝레이트(4.73억) = 인건비 3.15억 + 서버비 0.54억 + 임대료 0.60억 + 세금 0.44억<br />
+                  • 4.5년(22~26년 반기) 누적 소진액 = 4.73억 × 4.5년 = <strong className="text-brand-rose">-21.29억 원</strong>
                 </span>
               </span>
             </span>
@@ -516,66 +516,75 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
             </span>
           </div>
           <div className="text-2xl sm:text-3xl font-black text-brand-rose my-3 tracking-tight tabular-nums">
-            4.73억 원
+            연 4.73억 원
           </div>
-          <div className="text-xs text-slate-400 font-medium pt-2.5 border-t border-dark-750/70 truncate tabular-nums">
-            4대보험 7인 (인건비 3.15억 + 운영비 1.58억)
+          <div className="text-xs text-slate-300 font-medium pt-2.5 border-t border-dark-750/70 truncate tabular-nums">
+            22~26년(4.5년) 누적 소진: <strong className="font-bold text-brand-rose">-21.29억 원</strong>
           </div>
         </div>
 
-        {/* 5. 가용 현금 잔액 (26년 기준) */}
+        {/* 5. 가용 현금 잔액 (26년 기준: 40.00억 + 4.00억 - 21.29억 = 22.71억) */}
         <div className="p-4 sm:p-5 rounded-xl bg-dark-900 border border-cyan-500/60 ring-1 ring-cyan-500/20 bg-gradient-to-br from-dark-900 via-dark-900 to-cyan-950/40 shadow-lg shadow-cyan-500/10 flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold text-cyan-300 flex items-center gap-1.5">
               <Wallet className="w-4 h-4 text-cyan-400 shrink-0" />
               <span>가용 현금 잔액</span>
+              <span className="relative group inline-flex items-center cursor-help">
+                <Info className="w-3.5 h-3.5 text-cyan-300 group-hover:text-white transition-colors" />
+                <span className="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute bottom-full right-0 mb-2 w-80 p-3 rounded-xl bg-dark-950 border border-cyan-500/50 text-xs text-slate-200 font-normal shadow-2xl z-50 leading-relaxed">
+                  <strong className="text-cyan-300 font-bold block mb-1">가용 현금 잔액 정밀 산출식</strong>
+                  • 공식: 누적투자액 + 누적순수익 - (인건비 + 서버비 + 임대료 + 세금)<br />
+                  • 계산: 40.00억 + 4.00억 - (14.18억 + 2.43억 + 2.70억 + 1.98억)<br />
+                  • 결과: 44.00억 - 21.29억 = <strong className="text-cyan-300">22.71억 원</strong>
+                </span>
+              </span>
             </span>
             <span className="text-xs px-2.5 py-0.5 rounded-md font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
               26년 기준
             </span>
           </div>
           <div className="text-2xl sm:text-3xl font-black text-white my-3 tracking-tight tabular-nums">
-            34.2억 원+
+            22.71억 원
           </div>
           <div className="text-xs text-cyan-200/90 font-medium pt-2.5 border-t border-dark-750/70 truncate tabular-nums">
-            런웨이 <strong className="font-bold text-white">7.2년 이상</strong> 초안정권 확보
+            투자 40억 + 순익 4억 - 누적버닝 21.29억 (런웨이 <strong className="font-bold text-white">4.8년</strong>)
           </div>
         </div>
 
       </div>
 
-      {/* 3. NICE평가정보 공식 재무제표 요약표 */}
+      {/* 3. NICE평가정보 공식 재무제표 및 매년 버닝레이트·가용현금 요약표 */}
       <div className="p-6 rounded-2xl bg-dark-900 border border-dark-700 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-3.5 border-b border-dark-700 gap-3">
           <div>
             <div className="flex items-center space-x-2">
               <BarChart3 className="w-5 h-5 text-brand-emerald" />
               <h3 className="text-lg font-bold text-white tracking-tight">
-                결산 손익계산서 요약
+                결산 손익계산서 및 매년 버닝레이트 · 가용현금 정산표
               </h3>
               <span className="text-xs px-2.5 py-0.5 rounded-md font-bold bg-brand-emerald/15 text-brand-emerald">
-                NICE 공시
+                NICE 공시 · 매년 차감 반영
               </span>
             </div>
             <p className="text-sm text-slate-400 mt-1 font-normal">
-              22년~26년 반기 결산 및 실적 데이터
+              22년~26년 반기(4.5년) 매년 버닝레이트(연 4.73억) 차감 및 누적 가용 현금 잔액(22.71억) 산출 내역
             </p>
           </div>
         </div>
 
         <div className="overflow-x-auto">
-          <table className={`w-full min-w-[640px] text-left text-slate-200 ${tableClasses.tableText}`}>
+          <table className={`w-full min-w-[680px] text-left text-slate-200 ${tableClasses.tableText}`}>
             <thead className="bg-dark-850">
               <tr>
-                <th className={`${tableClasses.th} rounded-l-lg whitespace-nowrap w-[16%]`}>구분</th>
-                <th className={`${tableClasses.th} whitespace-nowrap text-right w-[11%]`}>22년</th>
-                <th className={`${tableClasses.th} whitespace-nowrap text-right w-[11%]`}>23년</th>
-                <th className={`${tableClasses.th} whitespace-nowrap text-right w-[11%]`}>24년</th>
-                <th className={`${tableClasses.th} whitespace-nowrap text-right w-[11%]`}>25년</th>
-                <th className={`${tableClasses.th} whitespace-nowrap text-right text-brand-cyan bg-cyan-950/30 font-bold border-b border-brand-cyan/40 w-[14%]`}>
+                <th className={`${tableClasses.th} rounded-l-lg whitespace-nowrap w-[18%]`}>구분</th>
+                <th className={`${tableClasses.th} whitespace-nowrap text-right w-[10%]`}>22년</th>
+                <th className={`${tableClasses.th} whitespace-nowrap text-right w-[10%]`}>23년</th>
+                <th className={`${tableClasses.th} whitespace-nowrap text-right w-[10%]`}>24년</th>
+                <th className={`${tableClasses.th} whitespace-nowrap text-right w-[10%]`}>25년</th>
+                <th className={`${tableClasses.th} whitespace-nowrap text-right text-brand-cyan bg-cyan-950/30 font-bold border-b border-brand-cyan/40 w-[13%]`}>
                   26년 (반기)
                 </th>
-                <th className={`${tableClasses.th} rounded-r-lg whitespace-nowrap text-center w-[26%]`}>추세 및 특이사항</th>
+                <th className={`${tableClasses.th} rounded-r-lg whitespace-nowrap text-center w-[29%]`}>4.5년 누적 합계 및 산출식</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-dark-750">
@@ -604,7 +613,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                 </td>
                 <td className={`${tableClasses.td} text-slate-300 whitespace-nowrap align-middle text-center`}>
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-emerald/15 text-brand-emerald border border-brand-emerald/30 tabular-nums">
-                    25년 38.6억 (전년비 +57.5%)
+                    누적 매출 103.9억 (25년 +57.5%)
                   </span>
                 </td>
               </tr>
@@ -634,37 +643,127 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                 </td>
                 <td className={`${tableClasses.td} text-slate-300 whitespace-nowrap align-middle text-center`}>
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-emerald/15 text-brand-emerald border border-brand-emerald/30 tabular-nums">
-                    25년 +6.8억 (OPM 17.6%)
+                    누적 영업이익 +5.9억 (OPM 17.6%)
                   </span>
                 </td>
               </tr>
 
-              {/* Row 3: 순이익 */}
-              <tr className="hover:bg-dark-800/50 transition-colors">
+              {/* Row 3: 순수익 (당기순이익) */}
+              <tr className="hover:bg-dark-800/50 transition-colors bg-emerald-950/10">
                 <td className={`${tableClasses.td} font-bold text-white whitespace-nowrap align-middle`}>
                   <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 rounded-full bg-slate-500"></span>
-                    <span className="font-bold text-white">순이익</span>
+                    <span className="w-2 h-2 rounded-full bg-brand-purpleLight"></span>
+                    <span className="font-bold text-white">순수익 (당기순손익)</span>
                   </div>
                 </td>
-                <td className={`${tableClasses.td} font-medium text-slate-400 text-right whitespace-nowrap align-middle tabular-nums`}>
+                <td className={`${tableClasses.td} font-medium text-brand-rose text-right whitespace-nowrap align-middle tabular-nums`}>
                   -5.4억
                 </td>
-                <td className={`${tableClasses.td} font-medium text-slate-400 text-right whitespace-nowrap align-middle tabular-nums`}>
+                <td className={`${tableClasses.td} font-medium text-brand-rose text-right whitespace-nowrap align-middle tabular-nums`}>
                   -4.3억
                 </td>
-                <td className={`${tableClasses.td} font-medium text-slate-200 text-right whitespace-nowrap align-middle tabular-nums`}>
+                <td className={`${tableClasses.td} font-bold text-brand-emerald text-right whitespace-nowrap align-middle tabular-nums`}>
                   +2.9억
                 </td>
-                <td className={`${tableClasses.td} font-medium text-slate-200 text-right whitespace-nowrap align-middle tabular-nums`}>
+                <td className={`${tableClasses.td} font-bold text-brand-emerald text-right whitespace-nowrap align-middle tabular-nums`}>
                   +6.1억
                 </td>
-                <td className={`${tableClasses.td} font-bold text-brand-purpleLight text-right whitespace-nowrap align-middle bg-cyan-950/20 tabular-nums`}>
+                <td className={`${tableClasses.td} font-bold text-brand-emerald text-right whitespace-nowrap align-middle bg-cyan-950/20 tabular-nums`}>
                   +4.7억
                 </td>
                 <td className={`${tableClasses.td} text-slate-300 whitespace-nowrap align-middle text-center`}>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-dark-800 text-slate-300 border border-dark-700 tabular-nums">
-                    25년 +6.1억 (NPM 15.8%)
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/40 tabular-nums">
+                    누적 순수익 합계: +4.00억 원
+                  </span>
+                </td>
+              </tr>
+
+              {/* Row 4: 연도별 투자 유치액 */}
+              <tr className="hover:bg-dark-800/50 transition-colors">
+                <td className={`${tableClasses.td} font-bold text-white whitespace-nowrap align-middle`}>
+                  <div className="flex items-center space-x-2">
+                    <span className="w-2 h-2 rounded-full bg-brand-purple"></span>
+                    <span className="font-bold text-brand-purpleLight">투자·보증 유입액</span>
+                  </div>
+                </td>
+                <td className={`${tableClasses.td} font-semibold text-brand-purpleLight text-right whitespace-nowrap align-middle tabular-nums`}>
+                  +2.0억
+                </td>
+                <td className={`${tableClasses.td} font-semibold text-brand-purpleLight text-right whitespace-nowrap align-middle tabular-nums`}>
+                  +8.0억
+                </td>
+                <td className={`${tableClasses.td} font-semibold text-brand-purpleLight text-right whitespace-nowrap align-middle tabular-nums`}>
+                  +10.0억
+                </td>
+                <td className={`${tableClasses.td} font-medium text-slate-400 text-right whitespace-nowrap align-middle tabular-nums`}>
+                  0.0억
+                </td>
+                <td className={`${tableClasses.td} font-bold text-brand-purpleLight text-right whitespace-nowrap align-middle bg-cyan-950/20 tabular-nums`}>
+                  +20.0억
+                </td>
+                <td className={`${tableClasses.td} text-slate-300 whitespace-nowrap align-middle text-center`}>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-purple/20 text-brand-purpleLight border border-brand-purple/40 tabular-nums">
+                    누적 투자액 합계: +40.00억 원
+                  </span>
+                </td>
+              </tr>
+
+              {/* Row 5: 매년 버닝레이트 (인건비+서버비+임대료+세금) */}
+              <tr className="hover:bg-dark-800/50 transition-colors bg-rose-950/10">
+                <td className={`${tableClasses.td} font-bold text-white whitespace-nowrap align-middle`}>
+                  <div className="flex items-center space-x-2">
+                    <span className="w-2 h-2 rounded-full bg-brand-rose"></span>
+                    <span className="font-bold text-brand-rose">매년 버닝레이트 차감</span>
+                  </div>
+                </td>
+                <td className={`${tableClasses.td} font-bold text-brand-rose text-right whitespace-nowrap align-middle tabular-nums`}>
+                  -4.73억
+                </td>
+                <td className={`${tableClasses.td} font-bold text-brand-rose text-right whitespace-nowrap align-middle tabular-nums`}>
+                  -4.73억
+                </td>
+                <td className={`${tableClasses.td} font-bold text-brand-rose text-right whitespace-nowrap align-middle tabular-nums`}>
+                  -4.73억
+                </td>
+                <td className={`${tableClasses.td} font-bold text-brand-rose text-right whitespace-nowrap align-middle tabular-nums`}>
+                  -4.73억
+                </td>
+                <td className={`${tableClasses.td} font-bold text-brand-rose text-right whitespace-nowrap align-middle bg-cyan-950/20 tabular-nums`}>
+                  -2.37억
+                </td>
+                <td className={`${tableClasses.td} text-slate-300 whitespace-nowrap align-middle text-center`}>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-rose/20 text-brand-rose border border-brand-rose/40 tabular-nums">
+                    4.5년 누적 소진: -21.29억 원
+                  </span>
+                </td>
+              </tr>
+
+              {/* Row 6: 기말 가용 현금 잔액 (누적) */}
+              <tr className="hover:bg-dark-800/50 transition-colors bg-cyan-950/25 border-t-2 border-cyan-500/40">
+                <td className={`${tableClasses.td} font-black text-cyan-300 whitespace-nowrap align-middle`}>
+                  <div className="flex items-center space-x-2">
+                    <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+                    <span className="font-black text-cyan-300">가용 현금 잔액 (누적)</span>
+                  </div>
+                </td>
+                <td className={`${tableClasses.td} font-mono text-slate-400 text-right whitespace-nowrap align-middle tabular-nums`}>
+                  -8.13억
+                </td>
+                <td className={`${tableClasses.td} font-mono text-slate-400 text-right whitespace-nowrap align-middle tabular-nums`}>
+                  -9.16억
+                </td>
+                <td className={`${tableClasses.td} font-mono text-slate-300 text-right whitespace-nowrap align-middle tabular-nums`}>
+                  -0.99억
+                </td>
+                <td className={`${tableClasses.td} font-bold text-brand-emerald text-right whitespace-nowrap align-middle tabular-nums`}>
+                  +0.38억
+                </td>
+                <td className={`${tableClasses.td} font-black text-white text-right whitespace-nowrap align-middle bg-cyan-500/20 tabular-nums text-base`}>
+                  22.71억
+                </td>
+                <td className={`${tableClasses.td} text-slate-200 whitespace-nowrap align-middle text-center`}>
+                  <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-black bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 tabular-nums">
+                    40.00억 + 4.00억 - 21.29억 = 22.71억 원
                   </span>
                 </td>
               </tr>
@@ -672,138 +771,157 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
           </table>
         </div>
 
-        {/* Source Citation */}
-        <div className="pt-2 border-t border-dark-750 flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-slate-400 gap-2">
-          <div className="flex items-center space-x-1.5">
-            <ShieldCheck className="w-3.5 h-3.5 text-brand-emerald shrink-0" />
-            <span>* 출처: <strong className="font-bold text-slate-300">사람인·NICE평가정보 결산 재무제표</strong></span>
+        {/* Source Citation & Exact Formula Callout */}
+        <div className="p-3.5 rounded-xl bg-dark-850 border border-cyan-500/30 flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-slate-200 gap-2">
+          <div className="flex items-center space-x-2">
+            <Calculator className="w-4 h-4 text-brand-cyan shrink-0" />
+            <span>
+              <strong>* 가용 현금 잔액 산출식:</strong> 누적투자액(<strong className="text-brand-purpleLight font-mono">40.00억</strong>) + 누적순수익(<strong className="text-brand-emerald font-mono">+4.00억</strong>) - 인건비(<strong className="text-brand-rose font-mono">14.18억</strong>) - 서버비(<strong className="text-brand-rose font-mono">2.43억</strong>) - 임대료(<strong className="text-brand-rose font-mono">2.70억</strong>) - 세금(<strong className="text-brand-rose font-mono">1.98억</strong>) = <strong className="text-cyan-300 font-mono text-sm">22.71억 원</strong>
+            </span>
           </div>
         </div>
       </div>
 
-      {/* 4. 연간 버닝레이트 분석 (4대보험 가입자 7인 기준) */}
+      {/* 4. 연간 및 4.5개년 누적 버닝레이트 분석 (인건비 · 서버비 · 임대료 · 세금 4대 지출 + 가용현금 정산) */}
       <div className="p-6 rounded-2xl bg-dark-900 border border-dark-700 space-y-5">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-3.5 border-b border-dark-700 gap-3">
           <div>
             <div className="flex items-center space-x-2">
               <Calculator className="w-5 h-5 text-brand-rose" />
               <h3 className="text-lg font-bold text-white tracking-tight flex items-center gap-1.5">
-                <span>연간 버닝레이트 분석</span>
+                <span>매년 버닝레이트 및 4.5년 누적 차감 분석</span>
                 <span className="relative group inline-flex items-center cursor-help">
                   <Info className="w-4 h-4 text-slate-400 group-hover:text-brand-cyan transition-colors" />
                   <span className="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute bottom-full left-0 sm:left-1/2 sm:-translate-x-1/2 mb-2 w-80 p-3.5 rounded-xl bg-dark-950 border border-dark-700 text-xs text-slate-200 font-normal shadow-2xl z-50 leading-relaxed">
-                    <strong className="text-brand-cyan font-bold block mb-1">버닝레이트(소진액) 산출 산식</strong>
-                    • 버닝레이트 = 4대보험 가입자(7인) × 평균 연봉(4,500만) × 1.5배수<br />
-                    • 연간 총 소진액(4.73억) = 직접 인건비 3.15억 + 간접운영비 1.58억<br />
-                    • NICE 기업공시(PG7387) 현재 4대보험 가입 7인 기준 반영
+                    <strong className="text-brand-cyan font-bold block mb-1">매년 버닝레이트(4.73억/년) × 4.5년 누적 차감</strong>
+                    • 인건비: 연 3.15억 × 4.5년 = 누적 14.18억<br />
+                    • 서버비: 연 0.54억 × 4.5년 = 누적 2.43억<br />
+                    • 임대료: 연 0.60억 × 4.5년 = 누적 2.70억<br />
+                    • 세금: 연 0.44억 × 4.5년 = 누적 1.98억<br />
+                    • 4.5년 누적 버닝레이트 총합 = <strong className="text-brand-rose">21.29억 원</strong>
                   </span>
                 </span>
               </h3>
               <span className="text-xs px-2.5 py-0.5 rounded-md font-bold bg-brand-rose/15 text-brand-rose">
-                4대보험 가입자 7인 기준
+                연 4.73억 × 4.5년 = 누적 21.29억
               </span>
             </div>
             <p className="text-sm text-slate-400 mt-1 font-normal">
-              4대보험 가입 7인 기준 핵심 5대 지출 분해 및 운영 비용 구성 (산출 산식은 <strong className="text-slate-300 font-semibold">(i) 아이콘</strong> 마우스오버 확인)
+              4대보험 가입 7인 기준 4대 지출(인건비·서버비·임대료·세금) 매년 소진액과 22~26년 반기(4.5년) 누적 차감액
             </p>
           </div>
         </div>
 
-        {/* 4대보험 가입자 7인 기준 5대 세부 지출 분해 카드 */}
+        {/* 4대 지출(인건비·서버비·임대료·세금) + 가용현금 정산 5열 그리드 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
           
-          {/* 1. 총 인건비 */}
+          {/* 1. 인건비 (연 3.15억 / 4.5년 누적 14.18억) */}
           <div className="p-4 sm:p-5 rounded-xl bg-dark-850/90 border border-dark-750 flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <span className="flex items-center gap-1.5 font-bold text-sm text-slate-200">
                 <Users className="w-4 h-4 text-brand-purpleLight shrink-0" />
-                <span>총 인건비</span>
+                <span>① 인건비 (7인)</span>
               </span>
-              <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-purple/20 text-brand-purpleLight font-bold tabular-nums">
-                비중 66.6%
+              <span className="text-xs px-2 py-0.5 rounded-md bg-brand-purple/20 text-brand-purpleLight font-bold tabular-nums">
+                연 3.15억
               </span>
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-white my-3 tracking-tight tabular-nums">
-              3.15억 원
+            <div className="my-3">
+              <div className="text-xs text-slate-400 mb-0.5">4.5년 누적 차감액</div>
+              <div className="text-2xl sm:text-3xl font-black text-white tracking-tight tabular-nums">
+                -14.18억 원
+              </div>
             </div>
             <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
-              4대보험 가입 7인 급여 · 4대보험
+              7인 × 4,500만 (연 3.15억 × 4.5년)
             </div>
           </div>
 
-          {/* 2. R&D · 특허 · 보안비 */}
-          <div className="p-4 sm:p-5 rounded-xl bg-dark-850/90 border border-dark-750 flex flex-col justify-between">
-            <div className="flex items-center justify-between">
-              <span className="flex items-center gap-1.5 font-bold text-sm text-slate-200">
-                <Flame className="w-4 h-4 text-brand-rose shrink-0" />
-                <span>R&D · 금융보안비</span>
-              </span>
-              <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-rose/20 text-brand-rose font-bold tabular-nums">
-                비중 9.5%
-              </span>
-            </div>
-            <div className="text-2xl sm:text-3xl font-black text-brand-rose my-3 tracking-tight tabular-nums">
-              4,500만 원
-            </div>
-            <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
-              금융망 연동 · 보안심사 · 특허
-            </div>
-          </div>
-
-          {/* 3. 임대 및 관리비 */}
-          <div className="p-4 sm:p-5 rounded-xl bg-dark-850/90 border border-dark-750 flex flex-col justify-between">
-            <div className="flex items-center justify-between">
-              <span className="flex items-center gap-1.5 font-bold text-sm text-slate-200">
-                <Building className="w-4 h-4 text-brand-amber shrink-0" />
-                <span>임대 및 관리비</span>
-              </span>
-              <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-amber/20 text-brand-amber font-bold tabular-nums">
-                비중 10.1%
-              </span>
-            </div>
-            <div className="text-2xl sm:text-3xl font-black text-brand-amber my-3 tracking-tight tabular-nums">
-              4,800만 원
-            </div>
-            <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
-              논현동 본사 · 여의도 핀테크랩
-            </div>
-          </div>
-
-          {/* 4. 부가세 및 세금 */}
-          <div className="p-4 sm:p-5 rounded-xl bg-dark-850/90 border border-dark-750 flex flex-col justify-between">
-            <div className="flex items-center justify-between">
-              <span className="flex items-center gap-1.5 font-bold text-sm text-slate-200">
-                <Receipt className="w-4 h-4 text-brand-teal shrink-0" />
-                <span>부가세 및 세금</span>
-              </span>
-              <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-teal/20 text-brand-teal font-bold tabular-nums">
-                비중 6.5%
-              </span>
-            </div>
-            <div className="text-2xl sm:text-3xl font-black text-brand-teal my-3 tracking-tight tabular-nums">
-              3,080만 원
-            </div>
-            <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
-              SaaS 이용료 부가세 · 공과금
-            </div>
-          </div>
-
-          {/* 5. 클라우드 인프라비 */}
+          {/* 2. 서버비 (연 5,400만 / 4.5년 누적 2.43억) */}
           <div className="p-4 sm:p-5 rounded-xl bg-dark-850/90 border border-dark-750 flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <span className="flex items-center gap-1.5 font-bold text-sm text-slate-200">
                 <Server className="w-4 h-4 text-brand-cyan shrink-0" />
-                <span>클라우드 서버비</span>
+                <span>② 서버비</span>
               </span>
-              <span className="text-xs px-2.5 py-0.5 rounded-md bg-brand-cyan/20 text-brand-cyan font-bold tabular-nums">
-                비중 7.2%
+              <span className="text-xs px-2 py-0.5 rounded-md bg-brand-cyan/20 text-brand-cyan font-bold tabular-nums">
+                연 0.54억
               </span>
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-brand-cyan my-3 tracking-tight tabular-nums">
-              3,420만 원
+            <div className="my-3">
+              <div className="text-xs text-slate-400 mb-0.5">4.5년 누적 차감액</div>
+              <div className="text-2xl sm:text-3xl font-black text-brand-cyan tracking-tight tabular-nums">
+                -2.43억 원
+              </div>
             </div>
             <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
-              Google Cloud · 금융존 유지
+              클라우드·금융보안망 (연 5,400만 × 4.5년)
+            </div>
+          </div>
+
+          {/* 3. 임대료 (연 6,000만 / 4.5년 누적 2.70억) */}
+          <div className="p-4 sm:p-5 rounded-xl bg-dark-850/90 border border-dark-750 flex flex-col justify-between">
+            <div className="flex items-center justify-between">
+              <span className="flex items-center gap-1.5 font-bold text-sm text-slate-200">
+                <Building className="w-4 h-4 text-brand-amber shrink-0" />
+                <span>③ 임대료</span>
+              </span>
+              <span className="text-xs px-2 py-0.5 rounded-md bg-brand-amber/20 text-brand-amber font-bold tabular-nums">
+                연 0.60억
+              </span>
+            </div>
+            <div className="my-3">
+              <div className="text-xs text-slate-400 mb-0.5">4.5년 누적 차감액</div>
+              <div className="text-2xl sm:text-3xl font-black text-brand-amber tracking-tight tabular-nums">
+                -2.70억 원
+              </div>
+            </div>
+            <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
+              논현 본사·여의도 랩 (연 6,000만 × 4.5년)
+            </div>
+          </div>
+
+          {/* 4. 세금 (연 4,400만 / 4.5년 누적 1.98억) */}
+          <div className="p-4 sm:p-5 rounded-xl bg-dark-850/90 border border-dark-750 flex flex-col justify-between">
+            <div className="flex items-center justify-between">
+              <span className="flex items-center gap-1.5 font-bold text-sm text-slate-200">
+                <Receipt className="w-4 h-4 text-brand-teal shrink-0" />
+                <span>④ 세금</span>
+              </span>
+              <span className="text-xs px-2 py-0.5 rounded-md bg-brand-teal/20 text-brand-teal font-bold tabular-nums">
+                연 0.44억
+              </span>
+            </div>
+            <div className="my-3">
+              <div className="text-xs text-slate-400 mb-0.5">4.5년 누적 차감액</div>
+              <div className="text-2xl sm:text-3xl font-black text-brand-teal tracking-tight tabular-nums">
+                -1.98억 원
+              </div>
+            </div>
+            <div className="pt-2.5 border-t border-dark-750/70 text-xs text-slate-400 font-medium truncate tabular-nums">
+              법인·부가세·공과금 (연 4,400만 × 4.5년)
+            </div>
+          </div>
+
+          {/* 5. 최종 가용 현금 잔액 정산 (22.71억) */}
+          <div className="p-4 sm:p-5 rounded-xl bg-cyan-950/30 border border-cyan-500/50 flex flex-col justify-between">
+            <div className="flex items-center justify-between">
+              <span className="flex items-center gap-1.5 font-bold text-sm text-cyan-300">
+                <Wallet className="w-4 h-4 text-brand-cyan shrink-0" />
+                <span>가용 현금 잔액</span>
+              </span>
+              <span className="text-xs px-2 py-0.5 rounded-md bg-cyan-500/20 text-cyan-300 font-bold tabular-nums">
+                정산 완료
+              </span>
+            </div>
+            <div className="my-3">
+              <div className="text-xs text-cyan-200/80 mb-0.5">40억(투자)+4억(순익)-21.29억</div>
+              <div className="text-2xl sm:text-3xl font-black text-white tracking-tight tabular-nums">
+                22.71억 원
+              </div>
+            </div>
+            <div className="pt-2.5 border-t border-cyan-500/30 text-xs text-cyan-200 font-medium truncate tabular-nums">
+              ①+②+③+④ 누적(-21.29억) 차감 완료
             </div>
           </div>
 
@@ -814,7 +932,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
           <div className="flex items-center space-x-1.5">
             <HelpCircle className="w-3.5 h-3.5 text-slate-400 shrink-0" />
             <span>
-              * 출처: <strong className="text-slate-300 font-semibold">사람인·NICE평가정보 공시 손익계산서</strong> 기준 (임대료 및 서버비는 비공개 대외비로 인근 시세 및 업계 표준 기반 추정치 반영)
+              * <strong className="text-slate-200 font-semibold">가용 현금 잔액(22.71억 원)</strong> = 누적투자액(40.00억) + 누적순수익(+4.00억) - 누적 인건비(14.18억) - 누적 서버비(2.43억) - 누적 임대료(2.70억) - 누적 세금(1.98억)
             </span>
           </div>
         </div>
