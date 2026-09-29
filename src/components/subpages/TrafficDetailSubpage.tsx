@@ -21,7 +21,7 @@ interface Props {
 export const TrafficDetailSubpage: React.FC<Props> = ({ data, isEmbedded = false }) => {
   const { traffic, countries, topPages, service, monthlyHistory } = data;
 
-  // Month selector (Default: 9월 - 2026년 9월 28일 실시간 기준)
+  // Month selector (Default: 9월 - 26년 9월 28일 실시간 기준)
   const [selectedMonth, setSelectedMonth] = useState<number>(9);
   // State for country search analysis
   const [selectedCountryCode, setSelectedCountryCode] = useState<string>('JP');

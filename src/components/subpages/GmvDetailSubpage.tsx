@@ -33,7 +33,7 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
                 <span>NICE평가정보 결산 검증</span>
               </span>
               <span className="text-xs text-slate-400 font-sans">
-                2023 ~ 2025 공시 확정치
+                23년 ~ 25년 공시 확정치
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2.5 pt-1">
@@ -52,15 +52,15 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
           </div>
         </div>
 
-        {/* 4대 주요 핵심 지표 바 (2025년 결산 단일 기준) */}
+        {/* 4대 주요 핵심 지표 바 (25년 결산 단일 기준) */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 mt-5 pt-4 border-t border-dark-750/80">
           
-          {/* 카드 1: 2025 총 매출액 */}
+          {/* 카드 1: 25년 총 매출액 */}
           <div className="p-3.5 rounded-xl bg-dark-900/80 border border-dark-750">
             <div className="flex items-center justify-between text-xs text-slate-400">
               <span className="flex items-center gap-1.5 font-medium">
                 <Coins className="w-3.5 h-3.5 text-amber-400" />
-                <span>2025 총 매출액</span>
+                <span>25년 총 매출액</span>
               </span>
               <span className="text-brand-emerald font-bold font-mono">+57.5% YoY</span>
             </div>
@@ -68,16 +68,16 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
               38.6억 원
             </div>
             <span className="text-xs text-slate-400 mt-1 block">
-              2024년 24.5억 원 대비 +14.1억 원
+              24년 24.5억 원 대비 +14.1억 원
             </span>
           </div>
 
-          {/* 카드 2: 2025 영업이익 */}
+          {/* 카드 2: 25년 영업이익 */}
           <div className="p-3.5 rounded-xl bg-dark-900/80 border border-dark-750">
             <div className="flex items-center justify-between text-xs text-slate-400">
               <span className="flex items-center gap-1.5 font-medium">
                 <TrendingUp className="w-3.5 h-3.5 text-brand-emerald" />
-                <span>2025 영업이익</span>
+                <span>25년 영업이익</span>
               </span>
               <span className="text-brand-emerald font-bold font-mono">OPM 17.6%</span>
             </div>
@@ -85,24 +85,24 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
               +6.8억 원
             </div>
             <span className="text-xs text-slate-400 mt-1 block">
-              2025년 당기순이익 +6.1억 원 (NPM 15.8%)
+              25년 당기순이익 +6.1억 원 (NPM 15.8%)
             </span>
           </div>
 
-          {/* 카드 3: 2025 가용 현금 */}
+          {/* 카드 3: 25년 가용 현금 */}
           <div className="p-3.5 rounded-xl bg-gradient-to-br from-cyan-950/30 via-dark-900 to-dark-900 border border-cyan-500/50">
             <div className="flex items-center justify-between text-xs text-slate-400">
               <span className="flex items-center gap-1.5 font-medium text-cyan-300">
                 <Wallet className="w-3.5 h-3.5 text-cyan-400" />
-                <span>2025 가용 현금 잔액</span>
+                <span>25년 가용 현금 잔액</span>
               </span>
-              <span className="text-brand-cyan font-bold font-mono">2025년 결산</span>
+              <span className="text-brand-cyan font-bold font-mono">25년 결산</span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-brand-cyan font-mono mt-1.5">
               29.8억 원
             </div>
             <span className="text-xs text-slate-400 mt-1 block">
-              2026년 반기 기준 34.2억 원+ (Pre-A 20억 반영)
+              26년 반기 기준 34.2억 원+ (Pre-A 20억 반영)
             </span>
           </div>
 
@@ -132,7 +132,7 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
             <div className="flex items-center space-x-2">
               <Building2 className="w-5 h-5 text-brand-emerald" />
               <h3 className="text-base sm:text-lg font-bold text-white tracking-normal">
-                재무 실적 및 수익성 지표 (2023 ~ 2025)
+                재무 실적 및 수익성 지표 (23년 ~ 25년)
               </h3>
               <span className="text-xs px-2 py-0.5 rounded font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-sans">
                 NICE 결산 검증
@@ -152,10 +152,10 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
             <thead className="bg-dark-850 text-slate-300 font-bold border-b border-dark-750 text-xs font-sans">
               <tr>
                 <th className="py-2.5 px-3.5 w-[20%]">지표 구분</th>
-                <th className="py-2.5 px-3 text-right w-[14%]">2023년</th>
-                <th className="py-2.5 px-3 text-right w-[14%]">2024년</th>
-                <th className="py-2.5 px-3 text-right w-[14%] text-brand-cyan">2025년</th>
-                <th className="py-2.5 px-3 text-right w-[14%]">전년 대비 (2025 YoY)</th>
+                <th className="py-2.5 px-3 text-right w-[14%]">23년</th>
+                <th className="py-2.5 px-3 text-right w-[14%]">24년</th>
+                <th className="py-2.5 px-3 text-right w-[14%] text-brand-cyan">25년</th>
+                <th className="py-2.5 px-3 text-right w-[14%]">전년 대비 (25년 YoY)</th>
                 <th className="py-2.5 px-3.5 w-[24%]">산출 및 검증 기준</th>
               </tr>
             </thead>
@@ -370,9 +370,9 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
             <thead className="bg-dark-850 text-slate-300 font-bold border-b border-dark-750 text-xs font-sans">
               <tr>
                 <th className="py-2.5 px-3.5 w-[30%]">세부 분류 항목</th>
-                <th className="py-2.5 px-3 text-right w-[17%]">2023년</th>
-                <th className="py-2.5 px-3 text-right w-[17%]">2024년</th>
-                <th className="py-2.5 px-3 text-right w-[17%] text-amber-300">2025년</th>
+                <th className="py-2.5 px-3 text-right w-[17%]">23년</th>
+                <th className="py-2.5 px-3 text-right w-[17%]">24년</th>
+                <th className="py-2.5 px-3 text-right w-[17%] text-amber-300">25년</th>
                 <th className="py-2.5 px-3.5 w-[19%]">단가 및 추정 마진율</th>
               </tr>
             </thead>
@@ -475,7 +475,7 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
                 <td className="py-2.5 px-3 text-right font-mono text-brand-emerald font-bold">
                   약 28.0억 <span className="text-xs text-brand-emerald font-bold block">(마진 72.5%)</span>
                 </td>
-                <td className="py-2.5 px-3.5 font-mono text-brand-emerald text-xs">2025년 마진 72.5%</td>
+                <td className="py-2.5 px-3.5 font-mono text-brand-emerald text-xs">25년 마진 72.5%</td>
               </tr>
 
               {/* 합산 총 매출액 (정합성) */}
@@ -575,36 +575,36 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
           </div>
           <div className="flex items-center gap-2 flex-wrap">
             <a
-              href="https://www.nicebizinfo.com/"
+              href="https://www.nicebizinfo.com/ep/EP0100M001GE.nice?itgSrch=4188802418"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-slate-500 text-slate-200 hover:text-white transition-all group font-sans text-xs"
-              title="(주)크레도스파트너스 NICE평가정보 기업·재무공시 상세 바로가기"
+              title="NICE평가정보 (주)크레도스파트너스(사업자번호 418-88-02418) 기업·재무공시 상세 바로가기"
             >
               <BrandLogo brandKey="nice" size="xs" className="w-3.5 h-3.5 p-0 border-0 bg-transparent rounded shrink-0" />
               <span className="font-semibold group-hover:text-brand-cyan">NICE 기업공시</span>
               <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-cyan-400 shrink-0" />
             </a>
             <a
-              href="https://sandbox.fintech.or.kr/"
+              href="https://www.fsc.go.kr/no010101/81880"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-slate-500 text-slate-200 hover:text-white transition-all group font-sans text-xs"
-              title="금융위원회 금융규제 샌드박스 혁신금융서비스 지정 공고 바로가기"
+              title="금융위원회 크레도스파트너스·DB금융투자 업무수탁 온라인관리 서비스(TOMS) 지정 공고 바로가기"
             >
               <BrandLogo brandKey="fsc" size="xs" className="w-3.5 h-3.5 p-0 border-0 bg-transparent rounded shrink-0" />
-              <span className="font-semibold group-hover:text-brand-cyan">금융위 혁신금융 공고</span>
+              <span className="font-semibold group-hover:text-brand-cyan">혁신금융 지정공고</span>
               <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-cyan-400 shrink-0" />
             </a>
             <a
-              href="https://credospartners.com/"
+              href="https://www.fsc.go.kr/no010101/81327"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-slate-500 text-slate-200 hover:text-white transition-all group font-sans text-xs"
-              title="크레도스파트너스 공식 웹사이트 바로가기"
+              title="금융위원회 크레도스파트너스 금융규제 샌드박스 위탁테스트·특례 선정 공고 바로가기"
             >
-              <BrandLogo brandKey="credos" size="xs" className="w-3.5 h-3.5 p-0 border-0 bg-transparent rounded shrink-0" />
-              <span className="font-semibold group-hover:text-brand-cyan">공식 웹사이트</span>
+              <BrandLogo brandKey="fsc" size="xs" className="w-3.5 h-3.5 p-0 border-0 bg-transparent rounded shrink-0" />
+              <span className="font-semibold group-hover:text-brand-cyan">특례정보</span>
               <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-cyan-400 shrink-0" />
             </a>
           </div>

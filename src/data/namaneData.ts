@@ -14,8 +14,8 @@ export const namaneService: TargetService = {
   appPackage: 'one.credos.platform',
   name: '크레도스파트너스',
   category: '글로벌 대체투자(AIP) · 신탁업무 전산화(TOMS) · 동적 자산유동화(PDAS) B2B 핀테크',
-  url: 'https://credospartners.com',
-  appStoreUrl: 'https://credospartners.com',
+  url: '',
+  appStoreUrl: '',
   verifiedAt: '2026.09.29'
 };
 

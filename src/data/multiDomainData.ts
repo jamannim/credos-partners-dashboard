@@ -7,9 +7,9 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
     appPackage: 'one.credos.platform',
     name: '크레도스파트너스',
     category: '글로벌 대체투자(AIP) · 신탁업무 전산화(TOMS) · 동적 자산유동화(PDAS) B2B 핀테크',
-    url: 'https://credospartners.com/',
-    appStoreUrl: 'https://credospartners.com/',
-    iosAppStoreUrl: 'https://credospartners.com/about',
+    url: '',
+    appStoreUrl: '',
+    iosAppStoreUrl: '',
     verifiedAt: '2026.09.29'
   },
   traffic: {
@@ -110,9 +110,9 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
     }
   },
   omnichannel: {
-    webUrl: 'https://credospartners.com/',
-    googlePlayUrl: 'https://credospartners.com/',
-    appStoreUrl: 'https://credospartners.com/about',
+    webUrl: '',
+    googlePlayUrl: '',
+    appStoreUrl: '',
     monthlyWebVisits: '월 18,450회 (B2B 금융기관·운용사 유입)',
     totalInstalls: '18개+ 금융기관 (AIP 10곳 + TOMS·PDAS 8곳)',
     totalMonthlyReach: '웹 월 1.85만 유입 / 18개+ 국내외 금융기관·운용사 도입',
@@ -123,7 +123,7 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         id: 'web',
         name: '공식 웹사이트 (B2B 허브)',
         type: 'Web',
-        url: 'https://credospartners.com/',
+        url: '',
         primaryMetric: '월 18,450회 방문',
         primaryValue: '18,450',
         subMetric: '자연 검색 유입 비중',
@@ -134,7 +134,7 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         id: 'android',
         name: 'AIP · TOMS 클라우드 SaaS',
         type: 'Google Play',
-        url: 'https://credospartners.com/',
+        url: '',
         primaryMetric: '금융위원회 혁신금융',
         primaryValue: '2건 지정',
         subMetric: '솔루션 만족도 & 기관',
@@ -147,7 +147,7 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         id: 'ios',
         name: 'PDAS 동적 유동화 엔진',
         type: 'App Store',
-        url: 'https://credospartners.com/about',
+        url: '',
         primaryMetric: '지식재산권·특허',
         primaryValue: '특허 등록',
         subMetric: '글로벌 파트너십',
@@ -482,7 +482,7 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
     companyAddress: '서울특별시 강남구 학동로19길 2, 2층 2418호 (논현동, 세일빌딩)',
     representative: '이하얀 (Andrew Lee)',
     sourceName: '공식 웹사이트(credospartners.com) · 금융규제 샌드박스 · 벤처투자 공시',
-    sourceUrl: 'https://credospartners.com/about',
+    sourceUrl: '',
     highlightNote: '25년 매출 38.6억·영업이익 +6.8억 달성 및 26년 케이넷투자파트너스 리드 Pre-A 20억 유치·혁신금융 2건 지정',
     burnRateFormulaNote: '버닝레이트 = 각 년도별 직원 수 × 평균 연봉 × 1.5배수 | 남은 잔액 = 투자액 + 영업이익 - 버닝레이트',
     financialHistory: [
@@ -641,7 +641,7 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         description: '금융위원회 혁신금융서비스 1호 지정: 신탁업무 온라인 관리 시스템(TOMS) 규제특례 획득',
         employeeCountAtTime: 12,
         burnRateAtTime: '10.7억',
-        sourceUrl: 'https://sandbox.fintech.or.kr',
+        sourceUrl: 'https://www.fsc.go.kr/no010101/81880',
         sourceName: '금융규제 샌드박스 공식 포털'
       },
       {
@@ -669,7 +669,7 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         description: '금융위원회 혁신금융서비스 2호 지정(사모투자 WM 관리 플랫폼 AIP) 및 동적 자산유동화(PDAS) 특허 등록',
         employeeCountAtTime: 16,
         burnRateAtTime: '15.3억',
-        sourceUrl: 'https://credospartners.com/about',
+        sourceUrl: '',
         sourceName: '크레도스파트너스 공식 연혁'
       },
       {
@@ -684,15 +684,15 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         description: '케이넷투자파트너스 리드 Pre-A 투자 유치, 글로벌 대체투자(AIP) 및 동적 유동화(PDAS) 아시아 스케일업',
         employeeCountAtTime: 23,
         burnRateAtTime: '약 20.2억',
-        sourceUrl: 'https://credospartners.com',
+        sourceUrl: '',
         sourceName: '벤처투자 공시 및 언론 보도'
       }
     ],
     shareholders: [
       { id: 1, name: '이하얀 (Andrew Lee)', role: '최대주주 (대표이사)', shareRatio: 46.0, shareText: '46.00%', companyName: '(주)크레도스파트너스', companyDomain: 'credospartners.com', companyKey: 'credos', note: '창업자·대표이사 (서울대 전기공학·NUS MBA, 홍콩 ICBC·미즈호·산업은행 구조화금융 15년+)' },
       { id: 2, name: '핵심 기술·금융공학 공동창업진', role: '특수관계인 (사내이사·CTO)', shareRatio: 18.5, shareText: '18.50%', companyName: '(주)크레도스파트너스', companyDomain: 'credospartners.com', companyKey: 'credos', note: 'TOMS 신탁전산화 및 PDAS 동적 자산유동화 특허 발명 핵심 엔지니어링 지분' },
-      { id: 3, name: '케이넷투자파트너스', role: 'Pre-A 리드 기관투자자', shareRatio: 14.5, shareText: '14.50%', companyName: '케이넷투자파트너스 (VC)', companyDomain: 'knetvc.com', companyKey: 'knet', note: '2026년 Pre-A 라운드 리드 벤처캐피탈 기관 주주' },
-      { id: 4, name: '서울테크노홀딩스 · 핀테크혁신펀드', role: 'Seed · TIPS 기관투자자', shareRatio: 11.0, shareText: '11.00%', companyName: '서울테크노홀딩스 · 한국성장금융', companyDomain: 'fintech.or.kr', companyKey: 'fss', note: '2023년 시드 투자 및 중기부 TIPS 선정 연계 액셀러레이터·모태펀드' },
+      { id: 3, name: '케이넷투자파트너스', role: 'Pre-A 리드 기관투자자', shareRatio: 14.5, shareText: '14.50%', companyName: '케이넷투자파트너스 (VC)', companyDomain: 'knetvc.com', companyKey: 'knet', note: '26년 Pre-A 라운드 리드 벤처캐피탈 기관 주주' },
+      { id: 4, name: '서울테크노홀딩스 · 핀테크혁신펀드', role: 'Seed · TIPS 기관투자자', shareRatio: 11.0, shareText: '11.00%', companyName: '서울테크노홀딩스 · 한국성장금융', companyDomain: 'fintech.or.kr', companyKey: 'fss', note: '23년 시드 투자 및 중기부 TIPS 선정 연계 액셀러레이터·모태펀드' },
       { id: 5, name: '글로벌 전략·기술 얼라이언스', role: '해외 전략 및 기술 파트너', shareRatio: 5.0, shareText: '5.00%', companyName: 'ViewTrade · VNSC · Lambda256', companyDomain: 'lambda256.io', companyKey: 'lambda256', note: '미국 해외채권 중개·베트남 소매대출 유동화·블록체인 인프라 전략 제휴' },
       { 
         id: 6, 
@@ -1141,7 +1141,7 @@ export const wowpassIntelligence: CompleteServiceIntelligence = {
     sourceName: '전자공시시스템(DART) & 언론 보도',
     sourceUrl: 'https://dart.fss.or.kr',
     valuationGoal: '기업가치 약 2,000억원 추정',
-    highlightNote: '2023년 방한 인바운드 회복과 함께 연간 거래액 5,000억 및 흑자 달성',
+    highlightNote: '23년 방한 인바운드 회복과 함께 연간 거래액 5,000억 및 흑자 달성',
     financialHistory: [
       { year: 2022, revenueWon: 52.0, revenueText: '52.0억', operatingProfitWon: -18.5, operatingProfitText: '-18.5억', netProfitWon: -19.2, netProfitText: '-19.2억' },
       { year: 2023, revenueWon: 245.0, revenueText: '245.0억', operatingProfitWon: 28.0, operatingProfitText: '28.0억', netProfitWon: 25.4, netProfitText: '25.4억' },
@@ -1149,9 +1149,9 @@ export const wowpassIntelligence: CompleteServiceIntelligence = {
       { year: 2025, revenueWon: 510.0, revenueText: '510.0억', operatingProfitWon: 78.0, operatingProfitText: '78.0억', netProfitWon: 72.0, netProfitText: '72.0억' }
     ],
     investments: [
-      { id: 1, period: '2022년', round: 'Series A', confirmedAmount: '60억원', partnerName: '한국투자파트너스, CJ인베스트먼트', partnerDomain: 'wowpass.io', partnerKey: 'wowpass', status: 'confirmed', description: '무인 환전 키오스크 전국 설치 인프라 구축' },
-      { id: 2, period: '2023년', round: 'Series B', confirmedAmount: '100억원', partnerName: '하나벤처스, 신한벤처투자', partnerDomain: 'ibk.co.kr', partnerKey: 'ibk', status: 'confirmed', description: '티머니 일체형 카드 출시 및 해외 마케팅 강화' },
-      { id: 3, period: '2024년', round: '전략적 투자', confirmedAmount: '50억원', partnerName: '글로벌 결제 네트워크 컨소시엄', partnerDomain: 'wowpass.io', partnerKey: 'wowpass', status: 'confirmed', description: '아시아 주요국 현지 마케팅 제휴' }
+      { id: 1, period: '22년', round: 'Series A', confirmedAmount: '60억원', partnerName: '한국투자파트너스, CJ인베스트먼트', partnerDomain: 'wowpass.io', partnerKey: 'wowpass', status: 'confirmed', description: '무인 환전 키오스크 전국 설치 인프라 구축' },
+      { id: 2, period: '23년', round: 'Series B', confirmedAmount: '100억원', partnerName: '하나벤처스, 신한벤처투자', partnerDomain: 'ibk.co.kr', partnerKey: 'ibk', status: 'confirmed', description: '티머니 일체형 카드 출시 및 해외 마케팅 강화' },
+      { id: 3, period: '24년', round: '전략적 투자', confirmedAmount: '50억원', partnerName: '글로벌 결제 네트워크 컨소시엄', partnerDomain: 'wowpass.io', partnerKey: 'wowpass', status: 'confirmed', description: '아시아 주요국 현지 마케팅 제휴' }
     ],
     shareholders: [
       { id: 1, name: '이장백 외 주요 경영진', role: '최대주주 및 경영진', shareRatio: 45.0, shareText: '45.00%', companyName: '(주)오렌지스퀘어', companyDomain: 'wowpass.io', companyKey: 'wowpass', note: '설립자 및 핵심 임원진 경영권 지배지분' },
@@ -1570,7 +1570,7 @@ export const travelwalletIntelligence: CompleteServiceIntelligence = {
     sourceName: '전자공시시스템(DART) & 금융투자협회',
     sourceUrl: 'https://dart.fss.or.kr',
     valuationGoal: '기업가치 약 5,000억원+ 추정',
-    highlightNote: '2023년 45개국 외환 수수료 제로 폭발적 확산으로 누적 외환 거래액 3조원 돌파 및 흑자 달성',
+    highlightNote: '23년 45개국 외환 수수료 제로 폭발적 확산으로 누적 외환 거래액 3조원 돌파 및 흑자 달성',
     financialHistory: [
       { year: 2022, revenueWon: 28.0, revenueText: '28.0억', operatingProfitWon: -85.0, operatingProfitText: '-85.0억', netProfitWon: -86.0, netProfitText: '-86.0억' },
       { year: 2023, revenueWon: 350.0, revenueText: '350.0억', operatingProfitWon: 18.0, operatingProfitText: '18.0억', netProfitWon: 15.0, netProfitText: '15.0억' },
@@ -1580,7 +1580,7 @@ export const travelwalletIntelligence: CompleteServiceIntelligence = {
     investments: [
       { id: 1, period: '2020년', round: 'Series A', confirmedAmount: '75억원', partnerName: '베이스인베스트먼트, 두나무앤파트너스', partnerDomain: 'travelwallet.co.kr', partnerKey: 'travelwallet', status: 'confirmed', description: '클라우드 기반 외환 결제 인프라 구축' },
       { id: 2, period: '2021년', round: 'Series B', confirmedAmount: '158억원', partnerName: '신한벤처투자, 한화투자증권', partnerDomain: 'ibk.co.kr', partnerKey: 'ibk', status: 'confirmed', description: 'Visa 글로벌 라이선스 획득 및 트래블페이 출시' },
-      { id: 3, period: '2023년', round: 'Series C', confirmedAmount: '197억원', partnerName: 'SK증권, 라이트하우스컴바인', partnerDomain: 'travelwallet.co.kr', partnerKey: 'travelwallet', status: 'confirmed', description: '누적 500억+ 투자 유치 및 글로벌 B2B 클라우드 솔루션 런칭' }
+      { id: 3, period: '23년', round: 'Series C', confirmedAmount: '197억원', partnerName: 'SK증권, 라이트하우스컴바인', partnerDomain: 'travelwallet.co.kr', partnerKey: 'travelwallet', status: 'confirmed', description: '누적 500억+ 투자 유치 및 글로벌 B2B 클라우드 솔루션 런칭' }
     ],
     shareholders: [
       { id: 1, name: '김형우 대표이사', role: '최대주주 (대표이사)', shareRatio: 35.0, shareText: '35.00%', companyName: '(주)트래블월렛', companyDomain: 'travelwallet.co.kr', companyKey: 'travelwallet', note: '창업자 및 대표이사 경영권 지분' },
@@ -1760,7 +1760,7 @@ export function generateDynamicIntelligence(inputUrl: string): CompleteServiceIn
     ],
     monthlyHistory: [
       { period: '2026-09', year: 2026, month: 9, visits: totalVisits, bounceRate, pagesPerVisit, searchShare, topCountry: '대한민국', topCountryShare: 55.4, note: '9월 28일(28일간) 누적 합산 기반 실시간 월환산 기준', mtdDays: 28, mtdCumulativeVisits: Math.round((totalVisits / 30) * 28) },
-      { period: '2026-08', year: 2026, month: 8, visits: Math.round(totalVisits * 0.97), bounceRate, pagesPerVisit, searchShare, topCountry: '대한민국', topCountryShare: 55.4, note: '2026년 8월 확정치 (정합성 검증 완료)' },
+      { period: '2026-08', year: 2026, month: 8, visits: Math.round(totalVisits * 0.97), bounceRate, pagesPerVisit, searchShare, topCountry: '대한민국', topCountryShare: 55.4, note: '26년 8월 확정치 (정합성 검증 완료)' },
       { period: '2026-07', year: 2026, month: 7, visits: Math.round(totalVisits * 0.94), bounceRate: Number((bounceRate * 0.98).toFixed(2)), pagesPerVisit, searchShare, topCountry: '대한민국', topCountryShare: 55.0, note: '전월 안정적 트래픽 유지' },
       { period: '2026-06', year: 2026, month: 6, visits: Math.round(totalVisits * 0.89), bounceRate: Number((bounceRate * 1.02).toFixed(2)), pagesPerVisit, searchShare, topCountry: '대한민국', topCountryShare: 54.2, note: '초여름 기저 트래픽 흐름' }
     ],

@@ -65,9 +65,6 @@ export const MetricsOverview: React.FC<Props> = ({
     ? '4.7' 
     : '4.8';
 
-  const iosUrl = service.iosAppStoreUrl || service.appStoreUrl;
-
-
   const topCountry = countries && countries.length > 0 ? countries[0] : { code: 'KR', name: '대한민국', share: 58.40, flag: '🇰🇷' };
   const secondCountry = countries && countries.length > 1 ? countries[1] : { code: 'HK', name: '홍콩', share: 18.20, flag: '🇭🇰' };
   const foreignShare = countries ? Number((100 - (countries.find(c => c.code === 'KR')?.share || 58.40)).toFixed(1)) : 41.6;
@@ -474,13 +471,13 @@ export const MetricsOverview: React.FC<Props> = ({
                       {androidDownloads}
                     </span>
                     <a 
-                      href={service.appStoreUrl} 
+                      href="https://www.fsc.go.kr/no010101/81880" 
                       target="_blank" 
                       rel="noreferrer" 
-                      title="크레도스파트너스 솔루션 상세로 이동"
+                      title="금융위원회 크레도스파트너스 혁신금융 지정공고 원문으로 이동"
                       className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-sky-400 bg-dark-800/80 hover:bg-dark-750 border border-dark-700 hover:border-sky-500/40 transition-all shrink-0"
                     >
-                      <span>솔루션</span>
+                      <span>혁신금융 공고</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -506,13 +503,13 @@ export const MetricsOverview: React.FC<Props> = ({
                       {iosDownloads}
                     </span>
                     <a 
-                      href={iosUrl} 
+                      href="https://www.fsc.go.kr/no010101/81327" 
                       target="_blank" 
                       rel="noreferrer" 
-                      title="크레도스파트너스 기업소개·특허로 이동"
+                      title="금융위원회 크레도스파트너스 특례정보 선정 공고로 이동"
                       className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-sky-400 bg-dark-800/80 hover:bg-dark-750 border border-dark-700 hover:border-sky-500/40 transition-all shrink-0"
                     >
-                      <span>특허·연혁</span>
+                      <span>특례정보</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   </div>

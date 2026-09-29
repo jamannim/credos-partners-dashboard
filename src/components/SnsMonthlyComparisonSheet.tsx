@@ -51,7 +51,7 @@ export const SnsMonthlyComparisonSheet: React.FC<Props> = ({
       period: '2026-07',
       year: 2026,
       month: 7,
-      monthLabel: '2026년 7월',
+      monthLabel: '26년 7월',
       badge: {
         text: '구축 피크',
         color: 'bg-dark-800 text-slate-300 border-dark-650'
@@ -78,7 +78,7 @@ export const SnsMonthlyComparisonSheet: React.FC<Props> = ({
       period: '2026-08',
       year: 2026,
       month: 8,
-      monthLabel: '2026년 8월',
+      monthLabel: '26년 8월',
       badge: {
         text: '8월 확정',
         color: 'bg-dark-800 text-slate-300 border-dark-650'
@@ -105,7 +105,7 @@ export const SnsMonthlyComparisonSheet: React.FC<Props> = ({
       period: '2026-09',
       year: 2026,
       month: 9,
-      monthLabel: '2026년 9월',
+      monthLabel: '26년 9월',
       badge: {
         text: '09.29 실시간',
         color: 'bg-brand-cyan/20 text-brand-cyan border-brand-cyan/40'
@@ -219,7 +219,7 @@ export const SnsMonthlyComparisonSheet: React.FC<Props> = ({
               </h3>
               <span className="text-xs px-2.5 py-0.5 rounded font-bold bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 flex items-center gap-1 font-sans">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
-                <span>2026년 9월 기본값</span>
+                <span>26년 9월 기본값</span>
               </span>
             </div>
             <p className="text-sm font-normal text-slate-400 mt-1">
@@ -241,11 +241,11 @@ export const SnsMonthlyComparisonSheet: React.FC<Props> = ({
           )}
         </div>
 
-        {/* 오늘(2026년 9월 28일) 기준 핵심 증감율 1줄 요약 배너 */}
+        {/* 오늘(26년 9월 28일) 기준 핵심 증감율 1줄 요약 배너 */}
         <div className="p-3 rounded-xl bg-dark-850/90 border border-dark-750 flex flex-wrap items-center justify-between gap-2.5 text-xs font-sans">
           <div className="flex items-center space-x-2">
             <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse shrink-0"></span>
-            <span className="font-bold text-white">2026년 9월 28일 실시간 성과</span>
+            <span className="font-bold text-white">26년 9월 28일 실시간 성과</span>
             <span className="text-slate-400 font-normal hidden sm:inline">(전월 8월 대비 증감):</span>
           </div>
           <div className="flex flex-wrap items-center gap-2 font-sans">

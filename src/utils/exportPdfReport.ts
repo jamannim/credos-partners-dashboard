@@ -364,9 +364,9 @@ export function exportVerificationReportPdf(
               <thead>
                 <tr>
                   <th>지표 구분</th>
-                  <th>2023년</th>
-                  <th>2024년</th>
-                  <th>2025년</th>
+                  <th>23년</th>
+                  <th>24년</th>
+                  <th>25년</th>
                   <th>비고 및 검증 기준</th>
                 </tr>
               </thead>

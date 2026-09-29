@@ -210,7 +210,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
     return ir.financialHistory.map(item => {
       const shortYear = String(item.year).slice(-2);
       const formattedLabel = item.periodLabel
-        ? item.periodLabel.replace('2026년', '26년').replace('2025년', '25년')
+        ? item.periodLabel.replace('26년', '26년').replace('25년', '25년')
         : `${shortYear}년`;
       return {
         yearName: formattedLabel,
@@ -298,11 +298,11 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
 
             {/* 3. 금융위원회 혁신금융서비스 공식 공고 열람 링크 */}
             <a
-              href="https://sandbox.fintech.or.kr"
+              href="https://www.fsc.go.kr/no010101/81880"
               target="_blank"
               rel="noopener noreferrer"
               className="h-10 px-3.5 rounded-xl bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-blue-500/50 text-xs sm:text-sm text-slate-200 font-bold flex items-center justify-center gap-2 transition-all shadow-sm hover:text-white group whitespace-nowrap"
-              title="금융위원회·한국핀테크지원센터 혁신금융서비스 지정 현황 조회"
+              title="금융위원회 크레도스파트너스·DB금융투자 업무수탁 온라인관리 서비스(TOMS) 지정 공고 조회"
             >
               <BrandLogo brandKey="fsc" size="xs" />
               <span className="group-hover:text-blue-300 transition-colors">혁신금융 지정공고</span>
@@ -842,11 +842,11 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
           </div>
           <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
             <a
-              href="https://sandbox.fintech.or.kr"
+              href="https://www.fsc.go.kr/no010101/81880"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-blue-500/40 text-xs font-bold text-slate-200 hover:text-white transition-all shadow-sm group"
-              title="금융위원회·한국핀테크지원센터 혁신금융서비스 지정 현황 조회"
+              title="금융위원회 크레도스파트너스·DB금융투자 업무수탁 온라인관리 서비스(TOMS) 지정 공고 조회"
             >
               <BrandLogo brandKey="fsc" size="xs" />
               <span className="group-hover:text-blue-300">금융위 혁신금융 공고</span>
@@ -880,12 +880,12 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
                 {ir.investments.map((inv) => {
                   const isHighlight = inv.round.includes('Pre-A') || inv.round.includes('First AI') || inv.round.includes('TIPS');
                   const formattedPeriod = inv.period
-                    .replace('2026년', '26년')
-                    .replace('2025년', '25년')
-                    .replace('2024년', '24년')
+                    .replace('26년', '26년')
+                    .replace('25년', '25년')
+                    .replace('24년', '24년')
                     .replace('2023~24년', '23~24년')
-                    .replace('2023년', '23년')
-                    .replace('2022년', '22년');
+                    .replace('23년', '23년')
+                    .replace('22년', '22년');
                   return (
                     <tr 
                       key={inv.id} 
@@ -1180,15 +1180,6 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
             </div>
             <div className="pt-2.5 text-xs text-slate-300 font-medium border-t border-dark-750/70 flex items-center justify-between tabular-nums">
               <span>AIP · TOMS · PDAS 통합 파이프라인</span>
-              <a
-                href="https://credospartners.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-brand-cyan inline-flex items-center gap-0.5"
-              >
-                <span>솔루션소개</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
             </div>
           </div>
 
@@ -1209,10 +1200,11 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
             <div className="pt-2.5 text-xs text-slate-300 font-medium border-t border-dark-750/70 flex items-center justify-between tabular-nums">
               <span>SaaS 구독 전환으로 유지보수 OPEX 경량화</span>
               <a
-                href="https://sandbox.fintech.or.kr"
+                href="https://www.fsc.go.kr/no010101/81327"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-brand-amber inline-flex items-center gap-0.5"
+                title="금융위원회 크레도스파트너스 금융규제 샌드박스 위탁테스트·특례 선정 공고 원문"
               >
                 <span>특례정보</span>
                 <ExternalLink className="w-3 h-3" />
@@ -1236,15 +1228,6 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
             </div>
             <div className="pt-2.5 text-xs text-slate-300 font-medium border-t border-dark-750/70 flex items-center justify-between">
               <span>AIP 중개 · TOMS SaaS · PDAS 수수료 3대 수익원</span>
-              <a
-                href="https://credospartners.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-brand-purpleLight inline-flex items-center gap-0.5"
-              >
-                <span>공식채널</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
             </div>
           </div>
         </div>
@@ -1338,11 +1321,11 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
             <span>25년 매출 38.6억 및 영업이익 +6.8억 달성: B2B 핀테크 SaaS 고수익 성장 궤도 진입</span>
           </div>
           <a 
-            href={ir.sourceUrl} 
+            href="https://www.nicebizinfo.com/ep/EP0100M001GE.nice?itgSrch=4188802418" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-slate-500 text-slate-200 hover:text-white transition-all group text-xs self-start sm:self-auto"
-            title="사람인·NICE평가정보 기업·재무공시 원문 열람 (새 창)"
+            title="NICE평가정보 (주)크레도스파트너스(사업자번호 418-88-02418) 기업·재무공시 조회"
           >
             <BrandLogo brandKey="nice" size="xs" className="w-3.5 h-3.5 p-0 border-0 bg-transparent rounded shrink-0" />
             <span className="font-semibold group-hover:text-brand-cyan">NICE 기업공시</span>

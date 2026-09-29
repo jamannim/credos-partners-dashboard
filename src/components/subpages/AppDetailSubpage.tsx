@@ -127,7 +127,7 @@ export const AppDetailSubpage: React.FC<Props> = ({ data }) => {
     ? 'https://apps.apple.com/kr/app/wowpass/id1626691440' 
     : isTravel 
     ? 'https://apps.apple.com/kr/app/travelwallet/id1527017208' 
-    : 'https://sandbox.fintech.or.kr';
+    : 'https://www.fsc.go.kr/no010101/81880';
 
   const takeawayData = useMemo(() => {
     if (isWowpass) {
@@ -179,26 +179,22 @@ export const AppDetailSubpage: React.FC<Props> = ({ data }) => {
           </p>
         </div>
 
-        {/* 우측 PDF 검증리포트 다운로드 및 공식 솔루션·특례 링크 */}
+        {/* 우측 PDF 검증리포트 다운로드 및 공식 특례 링크 */}
         <div className="flex flex-col items-end gap-2 shrink-0 sm:min-w-[240px]">
           <PdfReportButton data={data} tab="app" />
 
-          {/* 1. AIP · TOMS 솔루션 */}
-          <a 
-            href={service.appStoreUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3.5 py-2.5 rounded-lg bg-dark-850 hover:bg-dark-800 border border-dark-750 hover:border-brand-emerald/40 transition-all flex items-center justify-between gap-4 text-xs group w-full"
+          {/* 1. AIP · TOMS 솔루션 (홈페이지 링크 제거) */}
+          <div 
+            className="px-3.5 py-2.5 rounded-lg bg-dark-850 border border-dark-750 flex items-center justify-between gap-4 text-xs w-full"
           >
             <div className="flex items-center space-x-2.5">
               <BrandLogo brandKey="credos" size="xs" />
-              <span className="font-semibold text-white group-hover:text-brand-emerald transition-colors">AIP · TOMS 솔루션</span>
+              <span className="font-semibold text-white">AIP · TOMS 솔루션</span>
             </div>
             <div className="flex items-center space-x-2 font-mono">
               <span className="text-slate-200 font-bold">{androidDownloads}</span>
-              <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-white" />
             </div>
-          </a>
+          </div>
 
           {/* 2. PDAS 유동화 · 혁신금융 */}
           <a 

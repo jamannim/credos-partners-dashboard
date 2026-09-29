@@ -79,7 +79,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 <span>공식 마케팅 실측 분석</span>
               </span>
               <span className="text-xs text-slate-400 font-sans">
-                2026년 9월 실시간 기준
+                26년 9월 실시간 기준
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2.5 pt-1">
@@ -323,7 +323,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
           {/* 9월 실시간 */}
           <div className="p-4 rounded-xl bg-dark-850 border border-cyan-500/40 space-y-2.5">
             <div className="flex items-center justify-between pb-2 border-b border-dark-750">
-              <span className="text-xs font-bold text-brand-cyan font-sans">2026년 9월 (실시간)</span>
+              <span className="text-xs font-bold text-brand-cyan font-sans">26년 9월 (실시간)</span>
               <span className="text-xs text-slate-400 font-sans">전월(8월) 대비</span>
             </div>
 
@@ -362,7 +362,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
           {/* 8월 확정 */}
           <div className="p-4 rounded-xl bg-dark-850 border border-dark-750 space-y-2.5">
             <div className="flex items-center justify-between pb-2 border-b border-dark-750">
-              <span className="text-xs font-bold text-slate-200 font-sans">2026년 8월 (확정)</span>
+              <span className="text-xs font-bold text-slate-200 font-sans">26년 8월 (확정)</span>
               <span className="text-xs text-slate-400 font-sans">전월(7월) 대비</span>
             </div>
 
@@ -401,7 +401,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
           {/* 7월 피크 */}
           <div className="p-4 rounded-xl bg-dark-850 border border-dark-750 space-y-2.5">
             <div className="flex items-center justify-between pb-2 border-b border-dark-750">
-              <span className="text-xs font-bold text-slate-200 font-sans">2026년 7월 (피크)</span>
+              <span className="text-xs font-bold text-slate-200 font-sans">26년 7월 (피크)</span>
               <span className="text-xs text-slate-400 font-sans">기준월</span>
             </div>
 
