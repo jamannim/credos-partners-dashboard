@@ -19,7 +19,10 @@ export const TrafficCharts: React.FC<Props> = ({ data }) => {
     { name: '추천/제휴', value: traffic.referralShare, color: '#64748b' },
   ];
 
-  const topCountries = countries.slice(0, 5);
+  const topCountries = countries.map(c => ({
+    ...c,
+    shortName: c.code === 'CN' ? '중국' : c.code === 'ETC' ? '기타글로벌' : c.name
+  }));
 
   const monthlyList = (monthlyHistory && monthlyHistory.length > 0)
     ? [...monthlyHistory].sort((a, b) => (a.year * 100 + a.month) - (b.year * 100 + b.month))
@@ -95,10 +98,10 @@ export const TrafficCharts: React.FC<Props> = ({ data }) => {
               <Globe className="w-4 h-4 text-sky-400" />
               <h3 className="text-base font-bold text-white">국가별 유입 비중</h3>
             </div>
-            <p className="text-xs text-slate-400 mt-0.5">상위 5개 국가 방문 점유율</p>
+            <p className="text-xs text-slate-400 mt-0.5">전체 국가 점유율 (기타 글로벌 중 중국 1.25% 분리)</p>
           </div>
           <span className="text-xs font-medium text-slate-400">
-            1위 {topCountries[0]?.name || '국내'} ({topCountries[0]?.share || 0}%)
+            1위 {topCountries[0]?.shortName || '국내'} ({topCountries[0]?.share || 0}%)
           </span>
         </div>
 
@@ -108,31 +111,62 @@ export const TrafficCharts: React.FC<Props> = ({ data }) => {
               <XAxis type="number" unit="%" stroke="#64748b" fontSize={11} />
               <YAxis 
                 type="category" 
-                dataKey="name" 
+                dataKey="shortName" 
                 stroke="#94a3b8" 
                 fontSize={11} 
-                width={65}
+                width={68}
               />
               <Tooltip 
                 contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '8px', fontSize: '12px' }}
-                formatter={(value: any) => [`${value}%`, '방문 점유율']}
+                formatter={(value: any) => [`${Number(value).toFixed(2)}%`, '방문 점유율']}
               />
-              <Bar dataKey="share" fill="#38bdf8" radius={[0, 4, 4, 0]} barSize={14}>
-                {topCountries.map((_, index) => (
-                  <Cell key={`cell-${index}`} fill={index === 0 ? '#38bdf8' : index === 1 ? '#60a5fa' : '#64748b'} />
+              <Bar dataKey="share" fill="#38bdf8" radius={[0, 4, 4, 0]} barSize={12}>
+                {topCountries.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={
+                      entry.code === 'CN'
+                        ? '#22d3ee'
+                        : index === 0
+                        ? '#38bdf8'
+                        : index === 1
+                        ? '#60a5fa'
+                        : '#64748b'
+                    }
+                  />
                 ))}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
 
-        <div className="mt-2 grid grid-cols-3 gap-1 text-center text-xs border-t border-dark-750 pt-2.5">
-          {topCountries.slice(0, 3).map((c, i) => (
+        <div className="mt-2 grid grid-cols-4 gap-1 text-center text-xs border-t border-dark-750 pt-2.5">
+          {topCountries.slice(0, 2).map((c, i) => (
             <div key={i} className="truncate">
-              <span className="text-slate-400 block truncate">{c.flag} {c.name}</span>
-              <span className="text-xs text-slate-300 font-semibold">{c.share}%</span>
+              <span className="text-slate-400 block truncate">{c.flag} {c.shortName}</span>
+              <span className="text-xs text-slate-300 font-semibold">{c.share.toFixed(2)}%</span>
             </div>
           ))}
+          {(() => {
+            const cnItem = topCountries.find(c => c.code === 'CN');
+            const etcItem = topCountries.find(c => c.code === 'ETC');
+            return (
+              <>
+                {cnItem && (
+                  <div className="truncate bg-brand-cyan/10 rounded px-1 border border-brand-cyan/30">
+                    <span className="text-brand-cyan block truncate font-bold">{cnItem.flag} 중국(분리)</span>
+                    <span className="text-xs text-brand-cyan font-bold font-mono">{cnItem.share.toFixed(2)}%</span>
+                  </div>
+                )}
+                {etcItem && (
+                  <div className="truncate">
+                    <span className="text-slate-400 block truncate">{etcItem.flag} 기타글로벌</span>
+                    <span className="text-xs text-slate-300 font-semibold font-mono">{etcItem.share.toFixed(2)}%</span>
+                  </div>
+                )}
+              </>
+            );
+          })()}
         </div>
       </div>
 

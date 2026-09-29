@@ -163,7 +163,9 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
     { code: 'HK', name: '홍콩', share: 18.20, flag: '🇭🇰' },
     { code: 'US', name: '미국', share: 11.50, flag: '🇺🇸' },
     { code: 'VN', name: '베트남', share: 6.80, flag: '🇻🇳' },
-    { code: 'ETC', name: '싱가포르·기타', share: 5.10, flag: '🌐' }
+    { code: 'SG', name: '싱가포르', share: 3.20, flag: '🇸🇬' },
+    { code: 'CN', name: '중국 (기타 글로벌 중 분리)', share: 1.25, flag: '🇨🇳' },
+    { code: 'ETC', name: '기타 글로벌 (중국 제외)', share: 0.65, flag: '🌐' }
   ],
   topPages: [
     { path: '/ (메인 솔루션 허브)', name: 'AIP · TOMS · PDAS 3대 핵심 금융 IT 솔루션 소개', share: 41.2, role: '금융기관·운용사 의사결정자 솔루션 탐색 허브' },
@@ -243,6 +245,37 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         { rank: 1, keyword: 'Credos Partners Vietnam retail loan securitization', portal: 'Google VN', share: 48.0, estimatedVisits: 490, intent: '베트남 소매대출 채권 유동화 시스템 협약(24.09)' },
         { rank: 2, keyword: 'VNSC Finhay Credos Partners PDAS', portal: 'Google VN', share: 29.5, estimatedVisits: 300, intent: '베트남 증권·핀테크 파트너십 및 동적 유동화 연동' },
         { rank: 3, keyword: 'Korea ASEAN structured finance platform', portal: 'Google VN', share: 22.5, estimatedVisits: 230, intent: 'Cross-border Receivable Financing & ABS Infrastructure' }
+      ]
+    },
+    {
+      countryCode: 'SG',
+      countryName: '싱가포르',
+      flag: '🇸🇬',
+      shareOfSearch: 3.20,
+      mainPortals: [
+        { name: 'Google SG', share: 92.0 },
+        { name: 'Bing', share: 8.0 }
+      ],
+      keywords: [
+        { rank: 1, keyword: 'Credos Partners NUS MBA Singapore fintech', portal: 'Google SG', share: 45.0, estimatedVisits: 265, intent: '싱가포르 국부펀드·자산운용사 크로스보더 대체투자 네트워크' },
+        { rank: 2, keyword: 'Credos AIP private equity distribution', portal: 'Google SG', share: 33.0, estimatedVisits: 195, intent: '아시아 사모투자(PE)·구조화채권 WM 유통 플랫폼 검토' },
+        { rank: 3, keyword: 'PDAS dynamic securitization ASEAN', portal: 'Bing / Google', share: 22.0, estimatedVisits: 130, intent: '동남아 매출·소매대출 채권 유동화 SPC 관리 인프라' }
+      ]
+    },
+    {
+      countryCode: 'CN',
+      countryName: '중국 (기타 글로벌 중 분리)',
+      flag: '🇨🇳',
+      shareOfSearch: 1.25,
+      mainPortals: [
+        { name: 'Bing China', share: 52.4 },
+        { name: 'Baidu', share: 31.6 },
+        { name: 'Google (Enterprise VPN)', share: 16.0 }
+      ],
+      keywords: [
+        { rank: 1, keyword: 'Credos Partners ICBC structured finance', portal: 'Bing CN / Baidu', share: 46.0, estimatedVisits: 106, intent: '중국공상은행(ICBC) 구조화금융 출신 경영진 및 크로스보더 트랙레코드 조회' },
+        { rank: 2, keyword: 'Credos AIP cross-border fixed income', portal: 'Bing CN', share: 32.0, estimatedVisits: 74, intent: '중화권·글로벌 외화채권 및 대체투자 상품 한국 금융권 유통 구조 확인' },
+        { rank: 3, keyword: 'Korea trust operation management TOMS', portal: 'Google / Baidu', share: 22.0, estimatedVisits: 51, intent: '한국 신탁·SPC 전자기안 및 자산유동화(PDAS) 핀테크 기술 리서치' }
       ]
     }
   ],

@@ -24,7 +24,9 @@ export const TrafficDetailSubpage: React.FC<Props> = ({ data, isEmbedded = false
   // Month selector (Default: 9월 - 26년 9월 28일 실시간 기준)
   const [selectedMonth, setSelectedMonth] = useState<number>(9);
   // State for country search analysis
-  const [selectedCountryCode, setSelectedCountryCode] = useState<string>('JP');
+  const [selectedCountryCode, setSelectedCountryCode] = useState<string>(
+    data.countrySearchAnalysis?.[0]?.countryCode || 'KR'
+  );
 
   // Density states for tables
   const geoDensity: TableDensity = 'auto';
@@ -445,30 +447,55 @@ export const TrafficDetailSubpage: React.FC<Props> = ({ data, isEmbedded = false
                 </tr>
               </thead>
               <tbody className="divide-y divide-dark-750/70 text-slate-200">
-                {countries.slice(0, 5).map((c, i) => (
-                  <tr key={i} className="hover:bg-dark-800/40 transition-colors">
-                    <td className={`${geoClasses.td} font-medium flex items-center space-x-2`}>
-                      <span className="w-5 h-5 rounded bg-dark-800 border border-dark-700 text-xs font-bold text-sky-400 flex items-center justify-center shrink-0">
-                        {i + 1}
-                      </span>
-                      <CountryFlag code={c.code} name={c.name} size="md" />
-                      <span className="font-semibold text-white break-keep">{c.name}</span>
-                    </td>
-                    <td className={geoClasses.td}>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-16 bg-dark-750 h-1.5 rounded-full overflow-hidden shrink-0">
-                          <div className="bg-brand-purple h-full" style={{ width: `${c.share * 2}%` }}></div>
+                {countries.map((c, i) => {
+                  const isChina = c.code === 'CN' || c.name.includes('중국');
+                  return (
+                    <tr key={i} className={`hover:bg-dark-800/40 transition-colors ${isChina ? 'bg-brand-cyan/5' : ''}`}>
+                      <td className={`${geoClasses.td} font-medium flex items-center space-x-2`}>
+                        <span className={`w-5 h-5 rounded border text-xs font-bold flex items-center justify-center shrink-0 ${
+                          isChina
+                            ? 'bg-brand-cyan/20 border-brand-cyan/40 text-brand-cyan'
+                            : 'bg-dark-800 border-dark-700 text-sky-400'
+                        }`}>
+                          {i + 1}
+                        </span>
+                        <CountryFlag code={c.code} name={c.name} size="md" />
+                        <span className={`font-semibold break-keep ${isChina ? 'text-brand-cyan' : 'text-white'}`}>
+                          {c.name}
+                        </span>
+                      </td>
+                      <td className={geoClasses.td}>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-16 bg-dark-750 h-1.5 rounded-full overflow-hidden shrink-0">
+                            <div
+                              className={`h-full ${isChina ? 'bg-brand-cyan' : 'bg-brand-purple'}`}
+                              style={{ width: `${Math.min(100, c.share * 2)}%` }}
+                            ></div>
+                          </div>
+                          <span className={`font-bold font-mono ${isChina ? 'text-brand-cyan' : 'text-brand-purpleLight'}`}>
+                            {c.share.toFixed(2)}%
+                          </span>
                         </div>
-                        <span className="font-bold text-brand-purpleLight font-mono">{c.share}%</span>
-                      </div>
-                    </td>
-                    <td className={`${geoClasses.td} text-slate-300 font-mono whitespace-nowrap`}>
-                      {Math.round((selectedRecord.visits * c.share) / 100).toLocaleString()}회
-                    </td>
-                  </tr>
-                ))}
+                      </td>
+                      <td className={`${geoClasses.td} text-slate-300 font-mono whitespace-nowrap`}>
+                        {Math.round((selectedRecord.visits * c.share) / 100).toLocaleString()}회
+                        {isChina && (
+                          <span className="ml-1.5 px-1.5 py-0.5 rounded text-[11px] font-sans font-bold bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30">
+                            기타 글로벌 1.90% 중 65.8%
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
+          </div>
+          <div className="mt-3 p-2.5 rounded-lg bg-dark-850 border border-dark-750 text-xs text-slate-300 flex flex-wrap items-center justify-between gap-2">
+            <span>
+              * <strong>기타 글로벌(기존 1.90%) 세부 분리:</strong> 중국 본토 <strong className="text-brand-cyan font-mono">1.25%</strong> ({Math.round((selectedRecord.visits * 1.25) / 100).toLocaleString()}회) + 중국 외 기타 글로벌 <strong className="text-slate-200 font-mono">0.65%</strong> ({Math.round((selectedRecord.visits * 0.65) / 100).toLocaleString()}회)
+            </span>
+            <span className="text-slate-400 font-mono">전체 합계 100.00%</span>
           </div>
         </div>
 
@@ -477,9 +504,9 @@ export const TrafficDetailSubpage: React.FC<Props> = ({ data, isEmbedded = false
           <div className="flex items-center justify-between pb-3 border-b border-dark-700 mb-4">
             <div className="flex items-center space-x-2">
               <FileText className="w-4 h-4 text-brand-purpleLight" />
-              <h3 className="text-sm font-bold text-white tracking-wide">최다 유입 랜딩 페이지 Top 4</h3>
+              <h3 className="text-sm font-bold text-white tracking-wide">최다 유입 랜딩 페이지 Top {topPages.length}</h3>
             </div>
-            <span className="text-xs text-brand-emerald font-semibold">키오스크 및 K-POP</span>
+            <span className="text-xs text-brand-emerald font-semibold">AIP · TOMS · PDAS 솔루션 허브</span>
           </div>
 
           <div className="space-y-2.5">
@@ -516,11 +543,11 @@ export const TrafficDetailSubpage: React.FC<Props> = ({ data, isEmbedded = false
                 국가별 유입 검색 포털 & 검색 키워드 분석
               </h3>
               <span className="text-[15px] px-2 py-0.5 rounded font-bold bg-brand-cyan/15 text-brand-cyan">
-                자연 검색 82.06% 정밀 분석
+                자연 검색 {traffic.searchShare}% 정밀 분석
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-0.5">
-              국가별 주요 포털 검색 유입 키워드 실측 분석
+              국가별 주요 포털 검색 유입 키워드 실측 분석 (중국 1.25% 별도 분리 반영)
             </p>
           </div>
           <span className="text-xs text-slate-400">
@@ -583,7 +610,14 @@ export const TrafficDetailSubpage: React.FC<Props> = ({ data, isEmbedded = false
             </div>
 
             <div className="p-2.5 rounded-lg bg-dark-900 border border-dark-750/70 text-[16.5px] text-slate-400 leading-relaxed mt-3 break-keep">
-              💡 <strong>{activeCountrySearch.countryName} 인사이트:</strong> {activeCountrySearch.countryCode === 'JP' ? '야후재팬(58%) 중심 유입, 야후 검색 최적화(SEO) 핵심' : activeCountrySearch.countryCode === 'KR' ? '네이버 블로그 및 키오스크 위치 검색(68%) 중심' : '구글 모바일 검색 90% 이상 점유'}
+              💡 <strong>{activeCountrySearch.countryName} 인사이트:</strong>{' '}
+              {activeCountrySearch.countryCode === 'CN'
+                ? '기존 기타 글로벌(1.90%) 중 중국 본토 유입분(1.25%, 약 231회/월)으로, 중국공상은행(ICBC) 구조화금융 출신 경영진 레퍼런스 및 중화권 크로스보더 채권 리서치 유입 중심'
+                : activeCountrySearch.countryCode === 'HK'
+                ? '홍콩 자산운용사(NHW) 및 글로벌 IB 구조화금융 파트너의 구글·링크드인 검색 유입(18.20%) 집중'
+                : activeCountrySearch.countryCode === 'KR'
+                ? '네이버(54.6%)·구글 코리아(42.1%)를 통한 금융지주·신탁사·증권사 WM 부서 실무자 검색 중심'
+                : '구글 검색 엔진(90% 이상)을 통한 크로스보더 채권(ViewTrade) 및 동적 유동화(PDAS) 기술 검증 유입'}
             </div>
           </div>
 

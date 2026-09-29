@@ -110,6 +110,44 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   if (!info) return null;
 
+  // 크레도스파트너스 공식 심볼: 저해상도 파비콘 업스케일링 블러(흐림 현상)를 완전히 제거한 100% 벡터(SVG) 렌더링
+  if (info.key === 'credos' || info.domain.includes('credospartners')) {
+    return (
+      <span
+        title={info.name}
+        className={`inline-flex items-center justify-center rounded-lg bg-white p-1 border border-slate-200 shadow-sm shrink-0 ${sizeClasses} ${className}`}
+      >
+        <svg
+          viewBox="0 0 100 100"
+          className="w-full h-full"
+          shapeRendering="geometricPrecision"
+          aria-label="크레도스파트너스 공식 로고"
+        >
+          {/* 7개의 정밀 연결선 (원본 심볼 기하 구조 1:1 매칭) */}
+          <g stroke="#0f172a" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="50" y1="14" x2="23" y2="76" />
+            <line x1="50" y1="14" x2="77" y2="76" />
+            <line x1="50" y1="14" x2="88" y2="51" />
+            <line x1="50" y1="86" x2="23" y2="24" />
+            <line x1="50" y1="86" x2="77" y2="24" />
+            <line x1="50" y1="86" x2="12" y2="51" />
+            <line x1="23" y1="24" x2="12" y2="51" />
+          </g>
+          {/* 4개의 솔리드 블랙 노드 */}
+          <circle cx="50" cy="14" r="9" fill="#0f172a" />
+          <circle cx="88" cy="51" r="9" fill="#0f172a" />
+          <circle cx="23" cy="76" r="9" fill="#0f172a" />
+          <circle cx="77" cy="76" r="9" fill="#0f172a" />
+          {/* 4개의 화이트 아웃라인 노드 */}
+          <circle cx="23" cy="24" r="8.5" fill="#ffffff" stroke="#0f172a" strokeWidth="4.5" />
+          <circle cx="77" cy="24" r="8.5" fill="#ffffff" stroke="#0f172a" strokeWidth="4.5" />
+          <circle cx="12" cy="51" r="8.5" fill="#ffffff" stroke="#0f172a" strokeWidth="4.5" />
+          <circle cx="50" cy="86" r="8.5" fill="#ffffff" stroke="#0f172a" strokeWidth="4.5" />
+        </svg>
+      </span>
+    );
+  }
+
   if (error) {
     return (
       <span 
@@ -128,6 +166,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       title={info.name}
       loading="lazy"
       onError={() => setError(true)}
+      style={{ imageRendering: '-webkit-optimize-contrast' }}
       className={`${sizeClasses} rounded-lg object-contain shrink-0 bg-dark-800 p-1 border border-dark-700 shadow-sm ${className}`}
     />
   );

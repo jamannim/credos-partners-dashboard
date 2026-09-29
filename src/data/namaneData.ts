@@ -45,7 +45,8 @@ export const namaneCountries: CountryShare[] = [
   { code: 'US', name: '미국', share: 11.50, flag: '🇺🇸' },
   { code: 'VN', name: '베트남', share: 6.80, flag: '🇻🇳' },
   { code: 'SG', name: '싱가포르', share: 3.20, flag: '🇸🇬' },
-  { code: 'ETC', name: '기타 글로벌', share: 1.90, flag: '🌐' },
+  { code: 'CN', name: '중국 (기타 글로벌 중 분리)', share: 1.25, flag: '🇨🇳' },
+  { code: 'ETC', name: '기타 글로벌 (중국 제외)', share: 0.65, flag: '🌐' },
 ];
 
 export const namaneTopPages: TopPage[] = [
