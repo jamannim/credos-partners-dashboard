@@ -7,7 +7,6 @@ import type { CompleteServiceIntelligence } from '../../types/intelligence';
 import { BrandBadgesFromText, BrandLogo } from '../BrandLogo';
 import { getTableDensityClasses, type TableDensity } from '../TableDensityControl';
 import { PdfReportButton } from '../PdfReportButton';
-import { MarketingAutomationSecondPage } from './MarketingAutomationSecondPage';
 import { KeywordConquestGuidePage } from './KeywordConquestGuidePage';
 
 import type { SubViewId } from '../Header';
@@ -24,7 +23,6 @@ export const MarketingStrategySubpage: React.FC<Props> = ({
   onSubViewChange,
 }) => {
   const { service, marketingStrategy } = data;
-  const [showAutomationPage, setShowAutomationPage] = useState<boolean>(false);
   const [selectedKeywordGuideRank, setSelectedKeywordGuideRank] = useState<number | null>(null);
   const density: TableDensity = 'auto';
   const dClasses = getTableDensityClasses(density);
@@ -164,20 +162,7 @@ export const MarketingStrategySubpage: React.FC<Props> = ({
     return Rocket;
   };
 
-  const isAutomationOpen = showAutomationPage || activeSubView === 'smartplace-docs';
   const isKeywordGuideOpen = selectedKeywordGuideRank !== null || activeSubView === 'keyword-guide';
-
-  if (isAutomationOpen) {
-    return (
-      <MarketingAutomationSecondPage
-        serviceName={service.name}
-        onBack={() => {
-          setShowAutomationPage(false);
-          onSubViewChange?.('main');
-        }}
-      />
-    );
-  }
 
   if (isKeywordGuideOpen) {
     return (
@@ -398,17 +383,9 @@ export const MarketingStrategySubpage: React.FC<Props> = ({
               30일 완성 주차별 실행 로드맵
             </h3>
             <p className="text-sm text-slate-400 mt-0.5">
-              1주차 스마트플레이스 등록 집중 실행 (2~4주차 TBD)
+              1주차~4주차 B2B 검색 색인 및 기술 백서·솔루션 리드 전환 실행 일정
             </p>
           </div>
-          <button
-            onClick={() => setShowAutomationPage(true)}
-            className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-purple to-indigo-600 hover:from-brand-purpleLight hover:to-indigo-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-brand-purple/25 flex items-center gap-2 self-start sm:self-auto transition-all cursor-pointer shrink-0"
-          >
-            <Zap className="w-4 h-4 text-amber-300" />
-            <span>1주차 서류 등록 세컨페이지 열기</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -420,7 +397,7 @@ export const MarketingStrategySubpage: React.FC<Props> = ({
                 className={`p-5 rounded-xl border transition-all flex flex-col justify-between ${
                   isWeek1
                     ? 'bg-dark-850 border-brand-purple/60 shadow-md'
-                    : 'bg-dark-950/60 border-dark-800 opacity-75'
+                    : 'bg-dark-950/60 border-dark-800'
                 }`}
               >
                 <div>
@@ -429,58 +406,34 @@ export const MarketingStrategySubpage: React.FC<Props> = ({
                       className={`text-xs px-2.5 py-0.5 rounded-full font-bold border ${
                         isWeek1
                           ? 'bg-brand-purple/20 text-brand-purpleLight border-brand-purple/40'
-                          : 'bg-dark-800 text-slate-400 border-dark-700'
+                          : 'bg-dark-800 text-slate-300 border-dark-700'
                       }`}
                     >
                       {phase.week}
                     </span>
-                    <span
-                      className={`text-xs font-bold px-2 py-0.5 rounded ${
-                        isWeek1
-                          ? 'bg-brand-emerald/20 text-brand-emerald'
-                          : 'bg-dark-800 text-slate-400'
-                      }`}
-                    >
-                      {isWeek1 ? `운영: ${phase.budget}` : 'TBD'}
+                    <span className="text-xs font-bold px-2 py-0.5 rounded bg-brand-emerald/20 text-brand-emerald">
+                      운영: {phase.budget}
                     </span>
                   </div>
-                  <h4 className={`text-base font-bold mb-3 ${isWeek1 ? 'text-white' : 'text-slate-400'}`}>
-                    {isWeek1 ? '네이버 스마트플레이스 등록' : `${phase.title} (TBD)`}
+                  <h4 className="text-base font-bold mb-3 text-white">
+                    {phase.title}
                   </h4>
-                  {isWeek1 ? (
-                    <div className="space-y-2">
-                      {[
-                        '사업자등록증·설치계약서 등록',
-                        '키오스크 로고·전경·화면 실사 3장 첨부',
-                        '20개소 위치·운영시간·키워드 제출'
-                      ].map((act, aIdx) => (
-                        <div key={aIdx} className="flex items-start space-x-2 text-xs text-slate-200">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-brand-emerald shrink-0 mt-0.5" />
-                          <span className="leading-snug">{act}</span>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="p-3 rounded-lg bg-dark-900/80 border border-dark-800 text-xs text-slate-400 leading-relaxed">
-                      TBD (1주차 완료 후 오픈)
-                    </div>
-                  )}
+                  <div className="space-y-2">
+                    {phase.actions.map((act, aIdx) => (
+                      <div key={aIdx} className="flex items-start space-x-2 text-xs text-slate-200">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-emerald shrink-0 mt-0.5" />
+                        <span className="leading-snug">{act}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="mt-4 pt-3 border-t border-dark-700/50 flex items-center justify-between">
                   <span className="text-xs text-slate-400 font-semibold">
-                    상태: {isWeek1 ? '실행 가능' : 'TBD'}
+                    상태: {isWeek1 ? '즉시 실행' : '순차 진행'}
                   </span>
-                  {isWeek1 ? (
-                    <button
-                      onClick={() => setShowAutomationPage(true)}
-                      className="px-2.5 py-1 rounded-md bg-brand-purple hover:bg-brand-purpleLight text-white text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                    >
-                      <span>서류 등록·실행</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-                  ) : (
-                    <span className="text-xs font-bold text-slate-500">추후 진행</span>
-                  )}
+                  <span className={`text-xs font-bold ${isWeek1 ? 'text-brand-emerald' : 'text-slate-400'}`}>
+                    {isWeek1 ? '1순위 착수' : `${idx + 1}주차 예정`}
+                  </span>
                 </div>
               </div>
             );

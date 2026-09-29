@@ -21,8 +21,7 @@ export type SubViewId =
   | 'traffic-detail'
   | 'sns-sheet'
   | 'ir-trend'
-  | 'keyword-guide'
-  | 'smartplace-docs';
+  | 'keyword-guide';
 
 export interface SubMenuItem {
   id: SubViewId;
@@ -93,7 +92,6 @@ const GNB_MENU_TREE: GnbTabItem[] = [
     subItems: [
       { id: 'main', label: '마케팅 전략' },
       { id: 'keyword-guide', label: '키워드 공략집 가이드' },
-      { id: 'smartplace-docs', label: '스마트플레이스 서류 등록' },
     ],
   },
   {
