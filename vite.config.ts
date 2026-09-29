@@ -1,0 +1,21 @@
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  base: './',
+  server: {
+    port: 5173,
+    host: true
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `[name]-[hash].js`,
+        chunkFileNames: `[name]-[hash].js`,
+        assetFileNames: `[name]-[hash].[ext]`
+      }
+    }
+  }
+})
