@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   Server, 
   LayoutDashboard, 
-  AppWindow, 
   Rocket,
   Building2,
   Share2,
@@ -92,16 +91,6 @@ const GNB_MENU_TREE: GnbTabItem[] = [
     subItems: [
       { id: 'main', label: '마케팅 전략' },
       { id: 'keyword-guide', label: '키워드 공략집 가이드' },
-    ],
-  },
-  {
-    id: 'app',
-    group: 'task',
-    groupLabel: '과제',
-    label: '앱리뷰',
-    icon: AppWindow,
-    subItems: [
-      { id: 'main', label: '앱 마켓 리뷰 분석' },
     ],
   },
   {
