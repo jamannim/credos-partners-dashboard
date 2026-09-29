@@ -575,7 +575,7 @@ export const GmvDetailSubpage: React.FC<Props> = ({ data }) => {
           </div>
           <div className="flex items-center gap-2 flex-wrap">
             <a
-              href="https://www.nicebizinfo.com/ep/EP0100M001GE.nice?itgSrch=4188802418"
+              href="https://www.nicebizinfo.com/ep/EP0100M002GE.nice?kiscode=PG7387"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-slate-500 text-slate-200 hover:text-white transition-all group font-sans text-xs"

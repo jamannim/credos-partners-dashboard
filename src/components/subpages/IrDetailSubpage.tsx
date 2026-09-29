@@ -1321,7 +1321,7 @@ export const IrDetailSubpage: React.FC<Props> = ({ data, activeSubView, onSubVie
             <span>25년 매출 38.6억 및 영업이익 +6.8억 달성: B2B 핀테크 SaaS 고수익 성장 궤도 진입</span>
           </div>
           <a 
-            href="https://www.nicebizinfo.com/ep/EP0100M001GE.nice?itgSrch=4188802418" 
+            href="https://www.nicebizinfo.com/ep/EP0100M002GE.nice?kiscode=PG7387" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-dark-800 hover:bg-dark-750 border border-dark-700 hover:border-slate-500 text-slate-200 hover:text-white transition-all group text-xs self-start sm:self-auto"

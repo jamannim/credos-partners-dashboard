@@ -481,8 +481,8 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
     businessNumber: '418-88-02418',
     companyAddress: '서울특별시 강남구 학동로19길 2, 2층 2418호 (논현동, 세일빌딩)',
     representative: '이하얀 (Andrew Lee)',
-    sourceName: '공식 웹사이트(credospartners.com) · 금융규제 샌드박스 · 벤처투자 공시',
-    sourceUrl: '',
+    sourceName: 'NICE평가정보 기업공시 · 금융위원회 혁신금융 지정공고 · 벤처투자 공시',
+    sourceUrl: 'https://www.nicebizinfo.com/ep/EP0100M002GE.nice?kiscode=PG7387',
     highlightNote: '25년 매출 38.6억·영업이익 +6.8억 달성 및 26년 케이넷투자파트너스 리드 Pre-A 20억 유치·혁신금융 2건 지정',
     burnRateFormulaNote: '버닝레이트 = 각 년도별 직원 수 × 평균 연봉 × 1.5배수 | 남은 잔액 = 투자액 + 영업이익 - 버닝레이트',
     financialHistory: [
@@ -669,8 +669,8 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         description: '금융위원회 혁신금융서비스 2호 지정(사모투자 WM 관리 플랫폼 AIP) 및 동적 자산유동화(PDAS) 특허 등록',
         employeeCountAtTime: 16,
         burnRateAtTime: '15.3억',
-        sourceUrl: '',
-        sourceName: '크레도스파트너스 공식 연혁'
+        sourceUrl: 'https://www.fsc.go.kr/no010101/81327',
+        sourceName: '금융위원회 특례 선정 공고'
       },
       {
         id: 6,
@@ -684,8 +684,8 @@ export const namaneIntelligence: CompleteServiceIntelligence = {
         description: '케이넷투자파트너스 리드 Pre-A 투자 유치, 글로벌 대체투자(AIP) 및 동적 유동화(PDAS) 아시아 스케일업',
         employeeCountAtTime: 23,
         burnRateAtTime: '약 20.2억',
-        sourceUrl: '',
-        sourceName: '벤처투자 공시 및 언론 보도'
+        sourceUrl: 'https://www.nicebizinfo.com/ep/EP0100M002GE.nice?kiscode=PG7387',
+        sourceName: 'NICE 기업공시 및 벤처투자 공시'
       }
     ],
     shareholders: [
