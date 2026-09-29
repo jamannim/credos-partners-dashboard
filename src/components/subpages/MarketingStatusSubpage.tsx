@@ -88,7 +88,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
               <span className="text-sm font-normal text-slate-400 font-sans">| SNS 성과 분석</span>
             </h2>
             <p className="text-sm text-slate-300 max-w-3xl leading-relaxed">
-              링크드인(글로벌 크로스보더)·네이버 금융 PR·유튜브 기술 데모 3대 채널의 실측 반응 및 월별 성과 비교
+              링크드인(글로벌 크로스보더)·유튜브(기술 데모) 공식 2대 채널의 실측 반응 및 월별 성과 비교
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
           </div>
         </div>
 
-        {/* 4대 주요 지표 요약 바 */}
+        {/* 4대 주요 지표 요약 바 (공식 2대 채널: 링크드인 · 유튜브 합산) */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-5 pt-4 border-t border-dark-750/80">
           <div className="p-3.5 rounded-xl bg-dark-900/80 border border-dark-750">
             <div className="flex items-center justify-between text-xs text-slate-400">
@@ -121,13 +121,13 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 <Eye className="w-3.5 h-3.5 text-brand-cyan" />
                 <span>3개월 누적 조회수</span>
               </span>
-              <span className="text-brand-emerald font-bold font-sans">+23.8%</span>
+              <span className="text-brand-emerald font-bold font-sans">+24.0%</span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-white font-sans mt-1">
-              12.95만 회
+              8.70만 회
             </div>
             <span className="text-xs text-slate-400 mt-0.5 block">
-              9월 4.48만 회 포함
+              9월 3.00만 회 포함
             </span>
           </div>
 
@@ -137,13 +137,13 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 <Heart className="w-3.5 h-3.5 text-slate-400" />
                 <span>3개월 누적 공감·추천</span>
               </span>
-              <span className="text-brand-emerald font-bold font-sans">+30.8%</span>
+              <span className="text-brand-emerald font-bold font-sans">+30.9%</span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-white font-sans mt-1">
-              7,710개
+              5,152개
             </div>
             <span className="text-xs text-slate-400 mt-0.5 block">
-              링크드인 추천·보도 공감 누적
+              링크드인·유튜브 추천 누적
             </span>
           </div>
 
@@ -153,10 +153,10 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 <MessageCircle className="w-3.5 h-3.5 text-slate-400" />
                 <span>3개월 누적 문의·댓글</span>
               </span>
-              <span className="text-brand-emerald font-bold font-sans">+31.7%</span>
+              <span className="text-brand-emerald font-bold font-sans">+34.9%</span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-white font-sans mt-1">
-              831개
+              567개
             </div>
             <span className="text-xs text-slate-400 mt-0.5 block">
               금융사 실무진 참여·문의 피드백
@@ -169,14 +169,14 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 <TrendingUp className="w-3.5 h-3.5 text-brand-cyan" />
                 <span>가중 평균 참여율</span>
               </span>
-              <span className="text-brand-emerald font-bold font-sans">+0.37%p</span>
+              <span className="text-brand-emerald font-bold font-sans">+0.38%p</span>
             </div>
             <div className="text-xl sm:text-2xl font-black text-brand-cyan font-sans mt-1 flex items-center">
-              <span>6.60%</span>
+              <span>6.57%</span>
               <EngagementFormulaTooltip />
             </div>
             <span className="text-xs text-slate-400 mt-0.5 block">
-              B2B 채널별 인터랙션 가중 집계
+              공식 2채널 인터랙션 가중 집계
             </span>
           </div>
         </div>
@@ -192,7 +192,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
         )}
       </div>
 
-      {/* 3. 채널별 운영 포지셔닝 및 타깃 */}
+      {/* 3. 채널별 운영 포지셔닝 및 타깃 (공식 2대 채널: 링크드인 · 유튜브) */}
       <div className="p-5 sm:p-6 rounded-2xl bg-dark-900 border border-dark-700 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-3 border-b border-dark-750">
           <div>
@@ -201,15 +201,15 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
               <span>채널별 운영 포지셔닝 및 타깃</span>
             </h3>
             <p className="text-xs text-slate-400 mt-0.5">
-              B2B 금융기관 의사결정자 및 글로벌 파트너 타깃 채널별 콘텐츠 전략
+              B2B 금융기관 의사결정자 및 글로벌 파트너 타깃 공식 2대 채널 콘텐츠 전략
             </p>
           </div>
           <span className="text-xs px-2.5 py-1 rounded bg-dark-850 text-slate-300 border border-dark-750 font-sans self-start sm:self-auto">
-            3대 B2B 채널 분석
+            공식 2대 채널 분석
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* 채널 1: 링크드인 글로벌 */}
           <div className="p-4 rounded-xl bg-dark-850 border border-dark-750 space-y-3">
             <div className="flex items-center justify-between">
@@ -221,14 +221,14 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 </div>
               </div>
               <span className="text-xs px-2 py-0.5 rounded font-semibold bg-dark-800 text-slate-300 border border-dark-700 font-sans">
-                크로스보더 딜
+                크로스보더 · IR
               </span>
             </div>
             <p className="text-xs text-slate-300 truncate whitespace-nowrap" title="미국 ViewTrade 채권 중개 · 홍콩 NHW · 베트남 소매대출 유동화 협약">
               미국 ViewTrade 채권 중개 · 홍콩 NHW · 베트남 소매대출 유동화 협약
             </p>
             <div className="pt-2 border-t border-dark-750/80 flex items-center justify-between text-xs text-slate-400">
-              <span>타깃: 해외 운용사 · IB 심사역</span>
+              <span>타깃: 국내외 금융기관 · 운용사 · IB 심사역</span>
               <span className="text-brand-cyan font-semibold font-sans inline-flex items-center">
                 <span>참여율 6.8%</span>
                 <EngagementFormulaTooltip
@@ -238,41 +238,13 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
             </div>
           </div>
 
-          {/* 채널 2: 네이버 PR · 금융 미디어 */}
-          <div className="p-4 rounded-xl bg-dark-850 border border-dark-750 space-y-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <BrandLogo brandKey="naver" size="sm" />
-                <div>
-                  <div className="font-bold text-white text-sm">네이버 PR · 금융 뉴스룸</div>
-                  <div className="text-xs text-slate-400 font-sans">credospartners.com</div>
-                </div>
-              </div>
-              <span className="text-xs px-2 py-0.5 rounded font-semibold bg-dark-800 text-slate-300 border border-dark-700 font-sans">
-                혁신금융·IR 공시
-              </span>
-            </div>
-            <p className="text-xs text-slate-300 truncate whitespace-nowrap" title="금융위원회 혁신금융 2건 지정 및 케이넷 Pre-A 20억 투자 보도">
-              금융위원회 혁신금융 2건 지정 및 케이넷 Pre-A 20억 투자 보도
-            </p>
-            <div className="pt-2 border-t border-dark-750/80 flex items-center justify-between text-xs text-slate-400">
-              <span>타깃: 국내 금융지주 · 신탁사 · VC</span>
-              <span className="text-brand-cyan font-semibold font-sans inline-flex items-center">
-                <span>참여율 6.5%</span>
-                <EngagementFormulaTooltip
-                  detail="네이버 PR·뉴스룸 3개월 평균: (반응 합계 ÷ 조회수) × 100 = 6.5%"
-                />
-              </span>
-            </div>
-          </div>
-
-          {/* 채널 3: 유튜브 · 핀테크 위크 데모 */}
+          {/* 채널 2: 유튜브 · 핀테크 위크 데모 */}
           <div className="p-4 rounded-xl bg-dark-850 border border-dark-750 space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <BrandLogo brandKey="youtube" size="sm" />
                 <div>
-                  <div className="font-bold text-white text-sm">유튜브 · 핀테크 데모</div>
+                  <div className="font-bold text-white text-sm">유튜브 공식 채널</div>
                   <div className="text-xs text-slate-400 font-sans">@CredosPartners</div>
                 </div>
               </div>
@@ -284,11 +256,11 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
               TOMS 신탁전산화 · PDAS 동적 자산유동화 특허 및 핀테크 위크 시연
             </p>
             <div className="pt-2 border-t border-dark-750/80 flex items-center justify-between text-xs text-slate-400">
-              <span>타깃: 금융 IT · 구조화금융 실무진</span>
+              <span>타깃: 금융 IT · 신탁사 · 구조화금융 실무진</span>
               <span className="text-brand-cyan font-semibold font-sans inline-flex items-center">
                 <span>참여율 6.4%</span>
                 <EngagementFormulaTooltip
-                  detail="유튜브·핀테크 데모(@CredosPartners) 3개월 평균: (반응 합계 ÷ 조회수) × 100 = 6.4%"
+                  detail="유튜브(@CredosPartners) 3개월 평균: (반응 합계 ÷ 조회수) × 100 = 6.4%"
                 />
               </span>
             </div>
@@ -310,7 +282,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-0.5">
-              3대 채널(링크드인 글로벌, 네이버 금융 PR, 유튜브 기술 데모) 월별 인터랙션 합계 비교
+              공식 2대 채널(링크드인 글로벌, 유튜브 기술 데모) 월별 인터랙션 합계 비교
             </p>
           </div>
           <span className="text-xs text-slate-400 font-sans self-start sm:self-auto">
@@ -331,16 +303,16 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
               <div className="flex items-center justify-between p-2 rounded-lg bg-dark-900/80 border border-dark-750/70">
                 <span className="text-xs text-slate-400">조회수</span>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-sm sm:text-base font-bold text-white font-sans">4.48만 회</span>
-                  <span className="text-xs font-semibold text-emerald-400 font-sans bg-emerald-500/10 px-1.5 py-0.5 rounded">+23.8%</span>
+                  <span className="text-sm sm:text-base font-bold text-white font-sans">3.00만 회</span>
+                  <span className="text-xs font-semibold text-emerald-400 font-sans bg-emerald-500/10 px-1.5 py-0.5 rounded">+24.0%</span>
                 </div>
               </div>
 
               <div className="flex items-center justify-between p-2 rounded-lg bg-dark-900/80 border border-dark-750/70">
                 <span className="text-xs text-slate-400">총 반응 (추천+문의+공유)</span>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-sm sm:text-base font-bold text-white font-sans">3,055건</span>
-                  <span className="text-xs font-semibold text-emerald-400 font-sans bg-emerald-500/10 px-1.5 py-0.5 rounded">+30.9%</span>
+                  <span className="text-sm sm:text-base font-bold text-white font-sans">2,040건</span>
+                  <span className="text-xs font-semibold text-emerald-400 font-sans bg-emerald-500/10 px-1.5 py-0.5 rounded">+31.3%</span>
                 </div>
               </div>
 
@@ -348,12 +320,12 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 <span className="text-xs text-slate-400">평균 참여율</span>
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm sm:text-base font-bold text-white font-sans inline-flex items-center">
-                    <span>6.82%</span>
+                    <span>6.80%</span>
                     <EngagementFormulaTooltip
-                      detail="9월 실측: 3,055건(추천+문의+공유) ÷ 44,800회 × 100 = 6.82%"
+                      detail="9월 실측: 2,040건(추천+문의+공유) ÷ 30,000회 × 100 = 6.80%"
                     />
                   </span>
-                  <span className="text-xs font-semibold text-emerald-400 font-sans bg-emerald-500/10 px-1.5 py-0.5 rounded">+0.37%p</span>
+                  <span className="text-xs font-semibold text-emerald-400 font-sans bg-emerald-500/10 px-1.5 py-0.5 rounded">+0.38%p</span>
                 </div>
               </div>
             </div>
@@ -370,16 +342,16 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
               <div className="flex items-center justify-between p-2 rounded-lg bg-dark-900/80 border border-dark-750/70">
                 <span className="text-xs text-slate-400">조회수</span>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-sm sm:text-base font-bold text-white font-sans">3.62만 회</span>
-                  <span className="text-xs font-semibold text-rose-400 font-sans bg-rose-500/10 px-1.5 py-0.5 rounded">-25.4%</span>
+                  <span className="text-sm sm:text-base font-bold text-white font-sans">2.42만 회</span>
+                  <span className="text-xs font-semibold text-rose-400 font-sans bg-rose-500/10 px-1.5 py-0.5 rounded">-26.2%</span>
                 </div>
               </div>
 
               <div className="flex items-center justify-between p-2 rounded-lg bg-dark-900/80 border border-dark-750/70">
                 <span className="text-xs text-slate-400">총 반응 (추천+문의+공유)</span>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-sm sm:text-base font-bold text-white font-sans">2,334건</span>
-                  <span className="text-xs font-semibold text-rose-400 font-sans bg-rose-500/10 px-1.5 py-0.5 rounded">-26.0%</span>
+                  <span className="text-sm sm:text-base font-bold text-white font-sans">1,554건</span>
+                  <span className="text-xs font-semibold text-rose-400 font-sans bg-rose-500/10 px-1.5 py-0.5 rounded">-26.9%</span>
                 </div>
               </div>
 
@@ -387,12 +359,12 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 <span className="text-xs text-slate-400">평균 참여율</span>
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm sm:text-base font-bold text-white font-sans inline-flex items-center">
-                    <span>6.45%</span>
+                    <span>6.42%</span>
                     <EngagementFormulaTooltip
-                      detail="8월 실측: 2,334건(추천+문의+공유) ÷ 36,200회 × 100 = 6.45%"
+                      detail="8월 실측: 1,554건(추천+문의+공유) ÷ 24,200회 × 100 = 6.42%"
                     />
                   </span>
-                  <span className="text-xs font-semibold text-rose-400 font-sans bg-rose-500/10 px-1.5 py-0.5 rounded">-0.05%p</span>
+                  <span className="text-xs font-semibold text-rose-400 font-sans bg-rose-500/10 px-1.5 py-0.5 rounded">-0.06%p</span>
                 </div>
               </div>
             </div>
@@ -409,7 +381,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
               <div className="flex items-center justify-between p-2 rounded-lg bg-dark-900/80 border border-dark-750/70">
                 <span className="text-xs text-slate-400">조회수</span>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-sm sm:text-base font-bold text-white font-sans">4.85만 회</span>
+                  <span className="text-sm sm:text-base font-bold text-white font-sans">3.28만 회</span>
                   <span className="text-xs font-semibold text-slate-400 font-sans bg-dark-750 px-1.5 py-0.5 rounded">기준</span>
                 </div>
               </div>
@@ -417,7 +389,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
               <div className="flex items-center justify-between p-2 rounded-lg bg-dark-900/80 border border-dark-750/70">
                 <span className="text-xs text-slate-400">총 반응 (추천+문의+공유)</span>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-sm sm:text-base font-bold text-white font-sans">3,152건</span>
+                  <span className="text-sm sm:text-base font-bold text-white font-sans">2,125건</span>
                   <span className="text-xs font-semibold text-slate-400 font-sans bg-dark-750 px-1.5 py-0.5 rounded">기준</span>
                 </div>
               </div>
@@ -426,9 +398,9 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 <span className="text-xs text-slate-400">평균 참여율</span>
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm sm:text-base font-bold text-white font-sans inline-flex items-center">
-                    <span>6.50%</span>
+                    <span>6.48%</span>
                     <EngagementFormulaTooltip
-                      detail="7월 실측: 3,152건(추천+문의+공유) ÷ 48,500회 × 100 = 6.50%"
+                      detail="7월 실측: 2,125건(추천+문의+공유) ÷ 32,800회 × 100 = 6.48%"
                     />
                   </span>
                   <span className="text-xs font-semibold text-slate-400 font-sans bg-dark-750 px-1.5 py-0.5 rounded">기준</span>
@@ -438,7 +410,7 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
           </div>
         </div>
 
-        {/* 3대 채널별 유도형 반응 실측 요약 표 */}
+        {/* 공식 2대 채널별 유도형 반응 실측 요약 표 */}
         <div className="overflow-x-auto sm:overflow-visible rounded-xl border border-dark-750">
           <table 
             className="w-full text-left text-xs sm:text-sm table-fixed min-w-[700px] font-sans"
@@ -481,40 +453,13 @@ export const MarketingStatusSubpage: React.FC<Props> = ({ data, activeSubView, o
                 </td>
               </tr>
 
-              {/* 2. 네이버 PR · 뉴스룸 */}
-              <tr className="hover:bg-dark-800/40 transition-colors">
-                <td className="py-2.5 px-3.5 align-middle">
-                  <div className="flex items-center gap-2">
-                    <BrandLogo brandKey="naver" size="xs" />
-                    <div>
-                      <div className="font-bold text-white">네이버 PR · 금융 뉴스룸</div>
-                      <div className="text-xs text-slate-400 font-sans">credospartners.com</div>
-                    </div>
-                  </div>
-                </td>
-                <td className="py-2.5 px-3.5 text-slate-300 text-xs">
-                  혁신금융 2건 지정 · 케이넷 Pre-A 20억 투자 유치 공시
-                </td>
-                <td className="py-2.5 px-3.5 text-slate-200 text-xs font-sans">
-                  <span>1.48만 회 / 1,015건 / </span>
-                  <strong className="text-brand-cyan">6.86%</strong>
-                  <EngagementFormulaTooltip
-                    detail="네이버 PR·뉴스룸 9월: 1,015건 ÷ 14,800회 × 100 = 6.86%"
-                    align="center"
-                  />
-                </td>
-                <td className="py-2.5 px-3.5 text-slate-200 text-xs">
-                  국내 금융지주·신탁사 TOMS·AIP 도입 상담 신청
-                </td>
-              </tr>
-
-              {/* 3. 유튜브 · 핀테크 데모 */}
+              {/* 2. 유튜브 · 핀테크 데모 */}
               <tr className="hover:bg-dark-800/40 transition-colors">
                 <td className="py-2.5 px-3.5 align-middle">
                   <div className="flex items-center gap-2">
                     <BrandLogo brandKey="youtube" size="xs" />
                     <div>
-                      <div className="font-bold text-white">유튜브 · 핀테크 데모</div>
+                      <div className="font-bold text-white">유튜브 공식 채널</div>
                       <div className="text-xs text-slate-400 font-sans">@CredosPartners</div>
                     </div>
                   </div>
